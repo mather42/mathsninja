@@ -1,0 +1,12 @@
+maths-ninja/          
+├── index.html
+├── dailys.html
+├── magazine.html
+│
+├── css/
+│   └── style.css
+├── js/
+│   └── dailys.js
+│
+└── magazine/
+    └── Mathematica_Vol1.pdf
