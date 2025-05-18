@@ -1,0 +1,101 @@
+/* PLAYFUL COLOURS + BASIC LAYOUT  */
+:root {
+  --pink: #ff6bc7;
+  --blue: #00b7ff;
+  --yellow: #ffd447;
+  --bg: #fffdf7;
+  --dark: #333;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: linear-gradient(45deg, var(--pink), var(--blue));
+  padding: 1rem;
+  color: white;
+}
+
+.site-title {
+  margin-bottom: 0.5rem;
+}
+
+nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active,
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--pink);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  margin-top: 1rem;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.rainbow {
+  background: linear-gradient(90deg, var(--pink), var(--yellow), var(--blue));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#daily-box {
+  background: white;
+  border: 3px dashed var(--blue);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: var(--radius);
+  min-height: 120px;
+  font-size: 1.2rem;
+}
+
+.centre {
+  text-align: center;
+}
+
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 0.7rem;
+}
