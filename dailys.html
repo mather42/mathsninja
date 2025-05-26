@@ -3,13 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dailys | Maths Ninja 42</title>
-
-  <!-- site‑wide stylesheet -->
+  <title>Today’s Drops | Maths Ninja 42</title>
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- daily‑content script (random quote / problem / meme) -->
-  <script defer src="js/dailys.js"></script>
 </head>
 <body>
   <!-- ░░ HEADER ░░ -->
@@ -17,73 +12,72 @@
     <h1 class="site-title">Maths Ninja ⚔️</h1>
     <nav>
       <a href="index.html">Home</a>
-<a href="dailys.html">Dailys</a>
-<a href="jmc.html">JMC Guides</a>
-<a href="magazine.html">Magazine</a>
+      <a href="dailys.html" class="active">Dailys</a>
+      <a href="jmc.html">JMC Guides</a>
+      <a href="magazine.html">Magazine</a>
     </nav>
   </header>
 
- <!-- ░░ MAIN ░░ -->
-<main>
-  <h2 class="centre rainbow">Today’s Drops</h2>
+  <!-- ░░ MAIN ░░ -->
+  <main>
+    <h2 class="centre rainbow">Today’s Drops</h2>
 
-  <div id="daily-box">
-    <!-- Fun card -->
-    <div id="daily-fun" style="
-         background: white;
-         border: 2px solid var(--blue);
-         border-radius: var(--radius);
-         padding: 1rem;
-         margin-bottom: 1.5rem;
-       ">
-      <!-- content injected here -->
+    <div id="daily-box">
+      <!-- Fun card -->
+      <div id="daily-fun" style="
+           background: white;
+           border: 2px solid var(--blue);
+           border-radius: var(--radius);
+           padding: 1rem;
+           margin-bottom: 1.5rem;
+         ">
+        <!-- Fun content injected here -->
+      </div>
+
+      <!-- Puzzle card -->
+      <div id="daily-puzzle" style="
+           background: white;
+           border: 2px solid var(--pink);
+           border-radius: var(--radius);
+           padding: 1rem;
+         ">
+        <!-- Puzzle content injected here -->
+      </div>
     </div>
-
-    <!-- Puzzle card -->
-    <div id="daily-puzzle" style="
-         background: white;
-         border: 2px solid var(--pink);
-         border-radius: var(--radius);
-         padding: 1rem;
-       ">
-      <!-- content injected here -->
-    </div>
-  </div>
-</main>
-
-<script>
-document.addEventListener("DOMContentLoaded", async () => {
-  try {
-    const res = await fetch("dailys.json");
-    console.log("Fetch dailys.json status:", res.status);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    console.log("Parsed daily data:", data);
-
-    const { fun = [], puzzles = [] } = data;
-    if (!fun.length || !puzzles.length) {
-      throw new Error("Empty fun or puzzles array");
-    }
-
-    // One index per calendar day
-    const day = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
-    const funItem    = fun[   day % fun.length];
-    const puzzleItem = puzzles[day % puzzles.length];
-
-    document.getElementById("daily-fun").innerHTML    = funItem;
-    document.getElementById("daily-puzzle").innerHTML = puzzleItem;
-  } catch (err) {
-    console.error("Loading daily content failed:", err);
-    document.getElementById("daily-box").innerHTML =
-      "<p class='centre'>Sorry, today’s content is unavailable.</p>";
-  }
-});
-</script>
-
+  </main>
 
   <!-- ░░ FOOTER ░░ -->
   <footer>
-  <p>Say hi: <a href="mailto:your.email@example.com">cececheng1001@gmail.com</a></p>
-</footer>
+    <p>Say hi: <a href="mailto:cececheng1001@gmail.com">cececheng1001@gmail.com</a></p>
+  </footer>
+
+  <!-- ── Inline date-based picker ── -->
+  <script>
+  document.addEventListener("DOMContentLoaded", async () => {
+    try {
+      // Adjust this path if you put dailys.json in a subfolder (e.g. "data/dailys.json")
+      const res = await fetch("dailys.json");
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+
+      const { fun = [], puzzles = [] } = data;
+      if (!fun.length || !puzzles.length) {
+        throw new Error("The JSON arrays are empty or missing");
+      }
+
+      // One index per calendar day
+      const day = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+      const funItem    = fun[   day % fun.length];
+      const puzzleItem = puzzles[day % puzzles.length];
+
+      document.getElementById("daily-fun").innerHTML    = funItem;
+      document.getElementById("daily-puzzle").innerHTML = puzzleItem;
+    } catch (err) {
+      console.error("Loading daily content failed:", err);
+      document.getElementById("daily-box").innerHTML =
+        "<p class='centre'>Sorry, today’s content is unavailable.</p>";
+    }
+  });
+  </script>
 </body>
 </html>
