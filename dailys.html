@@ -28,35 +28,55 @@
   <h2 class="centre rainbow">Today’s Drops</h2>
 
   <div id="daily-box">
-    <div id="daily-fun"></div>
-    <hr style="margin:1.5rem 0">
-    <div id="daily-puzzle"></div>
+    <!-- Fun card -->
+    <div id="daily-fun" style="
+         background: white;
+         border: 2px solid var(--blue);
+         border-radius: var(--radius);
+         padding: 1rem;
+         margin-bottom: 1.5rem;
+       ">
+      <!-- content injected here -->
+    </div>
+
+    <!-- Puzzle card -->
+    <div id="daily-puzzle" style="
+         background: white;
+         border: 2px solid var(--pink);
+         border-radius: var(--radius);
+         padding: 1rem;
+       ">
+      <!-- content injected here -->
+    </div>
   </div>
 </main>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("dailys.json")
-    .then(res => res.json())
-    .then(data => {
-      const { fun, puzzles } = data;
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const res = await fetch("dailys.json");
+    console.log("Fetch dailys.json status:", res.status);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    console.log("Parsed daily data:", data);
 
-      // one index per day:
-      const day = Math.floor(Date.now() / (1000*60*60*24));
+    const { fun = [], puzzles = [] } = data;
+    if (!fun.length || !puzzles.length) {
+      throw new Error("Empty fun or puzzles array");
+    }
 
-      // pick from each list
-      const funItem    = fun[   day % fun.length];
-      const puzzleItem = puzzles[day % puzzles.length];
+    // One index per calendar day
+    const day = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+    const funItem    = fun[   day % fun.length];
+    const puzzleItem = puzzles[day % puzzles.length];
 
-      // inject into the two boxes
-      document.getElementById("daily-fun").innerHTML    = funItem;
-      document.getElementById("daily-puzzle").innerHTML = puzzleItem;
-    })
-    .catch(err => {
-      console.error("Loading daily content failed", err);
-      document.getElementById("daily-box").textContent =
-        "Sorry, today’s content is unavailable.";
-    });
+    document.getElementById("daily-fun").innerHTML    = funItem;
+    document.getElementById("daily-puzzle").innerHTML = puzzleItem;
+  } catch (err) {
+    console.error("Loading daily content failed:", err);
+    document.getElementById("daily-box").innerHTML =
+      "<p class='centre'>Sorry, today’s content is unavailable.</p>";
+  }
 });
 </script>
 
