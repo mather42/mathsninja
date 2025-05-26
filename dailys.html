@@ -23,15 +23,32 @@
     </nav>
   </header>
 
-  <!-- ░░ MAIN ░░ -->
-  <main>
-    <h2 class="centre rainbow">Today’s Drops</h2>
+ <!-- ░░ MAIN ░░ -->
+<main>
+  <h2 class="centre rainbow">Today’s Drops</h2>
 
-    <!-- JS fills this box with the daily quote / problem / fact / meme -->
-    <div id="daily-box"></div>
+  <!-- JS will fill this box with the daily quote / problem / fact / meme -->
+  <div id="daily-box"></div>
+</main>
 
-    <button id="new-btn" class="btn centre">Give me another!</button>
-  </main>
+<!-- ── Date‐based daily picker script ── -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("dailys.json")
+      .then(res => res.json())
+      .then(items => {
+        // One new item per calendar day:
+        const daysSinceEpoch = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+        const index = daysSinceEpoch % items.length;
+        document.getElementById("daily-box").innerHTML = items[index];
+      })
+      .catch(err => {
+        console.error("Could not load dailyContent", err);
+        document.getElementById("daily-box").textContent =
+          "Sorry, today's content is unavailable.";
+      });
+  });
+</script>
 
   <!-- ░░ FOOTER ░░ -->
   <footer>
