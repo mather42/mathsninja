@@ -102,16 +102,16 @@ footer {
 
 .bubble-link {
   display: inline-block;
-  background: var(--yellow);
-  color: var(--blue);
+  background: var(--pink);
+  color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 9999px;
   text-decoration: none;
   font-weight: bold;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transition: background 0.2s, transform 0.1s;
+  transition: transform 0.2s;
 }
+
 .bubble-link:hover {
-  background: var(--pink);
-  transform: translateY(-2px);
+  transform: scale(1.05);
 }
