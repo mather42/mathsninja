@@ -43,632 +43,1661 @@
   </section>
 
 
-<!<!-- █████ 2025 █████ -->
+<!-- █████ 2025 █████ -->
 <section class="invest-year" id="y2025">
-  <h2 class="centre rainbow">JMC 2025 Investigations</h2>
+  <h2 class="centre rainbow">JMC&nbsp;2025 Investigations</h2>
+
+  <p class="centre" style="margin-top:-0.5rem">
+    🔗 <a href="https://ukmt.org.uk/wp-content/uploads/2025/05/JMC-2025-solutions-and-investigations.pdf" target="_blank">
+      Official UKMT Solutions &amp; Investigations (PDF)
+    </a>
+  </p>
 
   <!-- ─── Q21 ─────────────────────────────────────────── -->
-  <details>
-    <summary>Q21 — Tilted square inside a square</summary>
+<details>
+  <summary>Q21 — Two nested squares PQRS and JKLM</summary>
 
-    <h4>1&nbsp;Understand</h4>
-    <p>You have a big square. On each side you mark the <em>same</em> fraction along &nbsp;– call that fraction <strong>f</strong>.
-       Join the marks; they make a smaller, tilted square. How big is that inner square?</p>
+  <!-- 21.1 (a) -->
+  <h4>21.1&nbsp;(a) Prove&nbsp;PJ∶JQ = QK∶KR = RL∶LS = SM∶MP</h4>
 
-    <h4>2&nbsp;Plan</h4>
-    <p>Because all four corners look the same, the picture is very symmetrical.
-       A neat way to find the inner area is:</p>
-    <blockquote><strong>Big square area – area of the four identical corner triangles.</strong></blockquote>
+  <p><strong>Understand.</strong> JKLM is a smaller square drawn inside PQRS with each
+     of its corners lying on one side of the big square.</p>
 
-    <h4>3&nbsp;Do&nbsp;it</h4>
-    <ul>
-      <li>Side of big square = 1 (we can choose 1 to make life easy).</li>
-      <li>One corner triangle has sides <strong>f</strong> and <strong>1 – f</strong> and is right-angled.</li>
-      <li>Triangle area = ½ × f × (1 – f).</li>
-      <li>Four triangles together: 2 f (1 – f).</li>
-      <li>So inner square area = 1 – 2f (1 – f) = 1 – 2f + 2f².</li>
-    </ul>
-    <p>Check the special case in the booklet: if <em>f</em> = ⅓, the answer is
-       1 – 2 × ⅓ × ⅔ = 5⁄9, exactly as printed.</p>
+  <p><strong>Plan.</strong> Show that each corner of JKLM sits the same fraction λ
+     of the way along its side of PQRS.</p>
 
-    <h4>4&nbsp;Look&nbsp;back</h4>
-    <ul>
-      <li>Extreme test: f = 0 or 1 gives inner area 1 – the formula works.</li>
-      <li>The area is smallest when f = ½; only half the big square is left.</li>
-      <li><strong>Big idea learned:</strong> when a picture is strongly symmetrical, it’s often easier to <em>remove</em>
-          repeated bits than to tackle the awkward shape head-on.</li>
-    </ul>
+  <p><strong>Do it.</strong></p>
+  <ol>
+    <li>Let the length of PQ be 1 unit.  Suppose point&nbsp;J divides PQ so that
+        <strong>PJ = λ</strong> and <strong>JQ = 1 − λ</strong>.</li>
+    <li>Because JKLM is a square, side JK is parallel to side PQ
+        and every vertex of JKLM is reached by sliding the
+        same fraction λ along a side of PQRS.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Therefore on side QR we have
+        <strong>QK = λ</strong> and <strong>KR = 1 − λ</strong>,<br>
+        and the same happens on RS and SP:
+        RL = λ, LS = 1 − λ,  SM = λ, MP = 1 − λ.</li>
+    <li>Hence
+      <div style="margin-top:.4rem">
+        PJ∶JQ = λ∶(1−λ),<br>
+        QK∶KR = λ∶(1−λ),<br>
+        RL∶LS = λ∶(1−λ),<br>
+        SM∶MP = λ∶(1−λ).
+      </div>
+      All four ratios are equal.</li>
+  </ol>
 
-    <p class="follow">Follow-on: <em>Junior Kangaroo 2023 Q21</em> – another “subtract corner triangles from a square” puzzle.</p>
+  <p><strong>Look back.</strong> Sliding every corner the same
+     fraction of its edge keeps the small square “in step”
+     all the way round.</p>
+
+  <!-- 21.1 (b) -->
+  <h4>21.1&nbsp;(b) Find λ if area JKLM : area PQRS = 25 : 49</h4>
+
+  <p><strong>Understand.</strong>  Area compares as (side length)².</p>
+
+  <p><strong>Plan.</strong>  Take the square root of the area ratio to get the
+     side-length ratio.</p>
+
+  <p><strong>Do it.</strong></p>
+  <ol>
+    <li>Small : big area = 25 : 49, so  
+        small side : big side = √25 : √49 = 5 : 7.</li>
+    <li>Therefore the fraction we called λ is 5⁄7.</li>
+  </ol>
+
+  <p><strong>Look back.</strong>  Whenever two similar shapes have an area ratio
+     <em>a : b</em>, the matching length ratio is √a : √b.</p>
+
+  <p class="follow">Follow-on: <em>Junior Kangaroo 2023 Q21</em></p>
   </details>
 
   <!-- ─── Q22 ─────────────────────────────────────────── -->
-  <details>
-    <summary>Q22 — Sweets counted in 4s and 5s</summary>
+<details>
+  <summary>Q22 — Idil’s toffees (groups of&nbsp;4 and&nbsp;5)</summary>
 
-    <h4>1&nbsp;Understand</h4>
-    <p>Idil has 31 toffees.<br>
-       • When she makes piles of 4, three are left over.<br>
-       • When she makes piles of 5, one is left over.</p>
-    <p>How many fudges (the leftovers) does she have?
-       Then, what if she had 32 toffees instead?</p>
+  <!-- 22.1 -->
+  <h4>22.1&nbsp; Show that y&nbsp;=&nbsp;3 is the <em>only</em> integer that makes 31&nbsp;−&nbsp;5y a positive multiple of 4</h4>
 
-    <h4>2&nbsp;Plan</h4>
-    <p>Handle leftovers by <strong>trial + tidy sums</strong>:</p>
-    <ol>
-      <li>Remove the leftovers from 31.</li>
-      <li>The number that remains must fit exactly into both pile sizes.</li>
-    </ol>
+  <p><strong>Understand.</strong>  31 − 5<em>y</em> must be (i) still positive and (ii) exactly divisible by 4.</p>
 
-    <h4>3&nbsp;Do&nbsp;it</h4>
-    <table>
-      <thead>
-        <tr><th>Fudges (groups&nbsp;of&nbsp;5)</th><th>Toffees&nbsp;used</th><th>Left</th><th>Multiple&nbsp;of&nbsp;4?</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>0</td><td>0</td><td>31</td><td>No (7 r 3)</td></tr>
-        <tr><td>1</td><td>5</td><td>26</td><td>No (6 r 2)</td></tr>
-        <tr><td>2</td><td>10</td><td>21</td><td>No (5 r 1)</td></tr>
-        <tr><td><strong>3</strong></td><td><strong>15</strong></td><td><strong>16</strong></td><td><strong>Yes (4×4)</strong></td></tr>
-      </tbody>
-    </table>
-    <p>So Idil has <strong>3&nbsp;fudges</strong> and 16 mints.</p>
+  <p><strong>Plan.</strong>  List the values of 31 − 5<em>y</em> as we let <em>y</em> run through 0, 1, 2, … until the result
+     drops below 1.  Then see which of those numbers is a multiple of 4.</p>
 
-    <p>For 32 toffees repeat quicker: 32 – 5y must be a multiple of 4.
-       y = 4 works ⇒ 32 – 20 = 12 ⇒ 3 groups of 4.
-       Idil would have <strong>4&nbsp;fudges</strong>.</p>
+  <p><strong>Do it (step table).</strong></p>
 
-    <h4>4&nbsp;Look&nbsp;back</h4>
-    <ul>
-      <li>No modular jargon needed – small trials plus short divisions work fast.</li>
-      <li><strong>Big idea:</strong> “Left over” → strip that bit first, then check what’s left.</li>
-    </ul>
-  </details>
+  <table>
+    <thead>
+      <tr><th>y</th><th>31 − 5y</th><th>Still&nbsp;positive?</th><th>Divide&nbsp;by&nbsp;4?</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>0</td><td>31</td><td>Yes</td><td>31÷4 = 7 r 3 → No</td></tr>
+      <tr><td>1</td><td>26</td><td>Yes</td><td>26÷4 = 6 r 2 → No</td></tr>
+      <tr><td>2</td><td>21</td><td>Yes</td><td>21÷4 = 5 r 1 → No</td></tr>
+      <tr><td><strong>3</strong></td><td><strong>16</strong></td><td>Yes</td><td><strong>16÷4 = 4</strong> → Works</td></tr>
+      <tr><td>4</td><td>11</td><td>Yes</td><td>11÷4 = 2 r 3 → No</td></tr>
+      <tr><td>5</td><td>6</td><td>Yes</td><td>6÷4 = 1 r 2 → No</td></tr>
+      <tr><td>6</td><td>1</td><td>Yes</td><td>1÷4 = 0 r 1 → No</td></tr>
+      <tr><td>7</td><td>−4</td><td>No (longer positive)</td><td> </td></tr>
+    </tbody>
+  </table>
+
+  <p>The <strong>only</strong> row that satisfies both conditions is <em>y = 3</em>.</p>
+
+  <!-- 22.2 -->
+  <h4>22.2&nbsp; Idil recounts and actually has 32 toffees – how many fudges now?</h4>
+
+  <p><strong>Understand.</strong> We repeat the same idea with 32 instead of 31.</p>
+
+  <p><strong>Plan.</strong>  Check the numbers 32 − 5<em>y</em> for <em>y</em> = 0, 1, 2,… until the result turns zero or negative.</p>
+
+  <p><strong>Do it (step table).</strong></p>
+
+  <table>
+    <thead>
+      <tr><th>y</th><th>32 − 5y</th><th>Still&nbsp;positive?</th><th>Divide&nbsp;by&nbsp;4?</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>0</td><td>32</td><td>Yes</td><td>32÷4 = 8 → Works</td></tr>
+      <tr><td>1</td><td>27</td><td>Yes</td><td>27÷4 = 6 r 3 → No</td></tr>
+      <tr><td>2</td><td>22</td><td>Yes</td><td>22÷4 = 5 r 2 → No</td></tr>
+      <tr><td>3</td><td>17</td><td>Yes</td><td>17÷4 = 4 r 1 → No</td></tr>
+      <tr><td><strong>4</strong></td><td><strong>12</strong></td><td>Yes</td><td><strong>12÷4 = 3</strong> → Works</td></tr>
+      <tr><td>5</td><td>7</td><td>Yes</td><td>7÷4 = 1 r 3 → No</td></tr>
+      <tr><td>6</td><td>2</td><td>Yes</td><td>2÷4 = 0 r 2 → No</td></tr>
+      <tr><td>7</td><td>−3</td><td>No</td><td> </td></tr>
+    </tbody>
+  </table>
+
+  <p>The <em>smallest</em> positive <em>y</em> that works is **4**, so Idil now has
+     <strong>4&nbsp;fudges</strong> (groups of 5).</p>
+
+  <p><strong>Why we list instead of using fancy symbols.</strong>  
+     With only a handful of possibilities (because 5y soon overtakes 31 or 32),
+     a short table is faster and clearer than new algebra words.</p>
+
+  <p class="follow">Follow-on: <em>Junior Kangaroo&nbsp;2018&nbsp;Q18</em></p>
+</details>
 
   <!-- ─── Q23 ─────────────────────────────────────────── -->
-  <details>
-    <summary>Q23 — Three-leg walk (ratio 5 : 4 : 3)</summary>
+<details>
+  <summary>Q23 — Three-town tour (roads in a fixed pattern)</summary>
 
-    <h4>1&nbsp;Understand</h4>
-    <p>Legs PQ : QR : RP = 5 : 4 : 3.<br>
-       (a) Total distance = 108 km.<br>
-       (b) Shorten RP by <em>k</em>&nbsp;%. What happens to the perimeter?</p>
+  <!-- 23.1 -->
+  <h4>23.1&nbsp; The tour P → Q → R → P is 108 km – find each road length</h4>
 
-    <h4>2&nbsp;Plan</h4>
-    <p>Use the <strong>one-part method</strong>: add ratio numbers, divide the total, then multiply.</p>
+  <p><strong>Understand.</strong>  The three direct roads are always in the ratio
+     <strong>5 : 4 : 3</strong>.</p>
 
-    <h4>3&nbsp;Do&nbsp;it</h4>
-    <p>(a) 5 + 4 + 3 = 12 parts.<br>
-       108 ÷ 12 = 9 km per part.</p>
-    <ul>
-      <li>PQ = 5 × 9 = 45 km</li>
-      <li>QR = 4 × 9 = 36 km</li>
-      <li>RP = 3 × 9 = 27 km</li>
-    </ul>
-    <p>(b) New RP = 27 × (100 – <em>k</em>)/100.<br>
-       New perimeter = 45 + 36 + that number.
-       Give it any target total and solve for <em>k</em> with basic percent algebra.</p>
+  <p><strong>Plan.</strong>  Add the ratio numbers (5 + 4 + 3 = 12).  
+     One “ratio part” times 12 gives the full tour length.</p>
 
-    <h4>4&nbsp;Look&nbsp;back</h4>
-    <ul>
-      <li><strong>Ratio habit:</strong> divide first, multiply later.</li>
-      <li>Any fixed-ratio family stretches or shrinks together.</li>
-    </ul>
-  </details>
+  <p><strong>Do it.</strong></p>
+  <ul>
+    <li>1 part = 108 km ÷ 12 = <strong>9 km</strong>.</li>
+    <li>PQ = 5 parts = 5 × 9 = 45 km.</li>
+    <li>QR = 4 parts = 4 × 9 = 36 km.</li>
+    <li>RP = 3 parts = 3 × 9 = 27 km.</li>
+  </ul>
 
+  <p><strong>Look back.</strong>  Dividing first, then multiplying, keeps the
+     arithmetic simple and exact.</p>
+
+  <!-- 23.2 -->
+  <h4>23.2&nbsp; Extra rules<br>
+      • Road lengths are whole numbers. <br>
+      • P → R via Q is twice direct P → R. <br>
+      • P → Q via R is three times direct P → Q. <br>
+      Find the <em>shortest</em> possible tour.</h4>
+
+  <p><strong>Set up the equations.</strong></p>
+  <ul>
+    <li>Let direct PQ = <strong>x&nbsp;km</strong>, QR = <strong>y</strong>, RP = <strong>z</strong>.</li>
+    <li>P → R via Q is x + y; we’re told x + y = 2z. &nbsp;……(1)</li>
+    <li>P → Q via R is y + z; we’re told y + z = 3x. &nbsp;……(2)</li>
+  </ul>
+
+  <p><strong>Eliminate one letter.</strong></p>
+  <ul>
+    <li>From (1): <span style="white-space:nowrap;">y = 2z − x.</span></li>
+    <li>Put that into (2):  
+        (2z − x) + z = 3x  
+        ⇒ 3z − x = 3x  
+        ⇒ 3z = 4x  
+        ⇒ <strong>z = 4x⁄3</strong>.</li>
+  </ul>
+
+  <p><strong>Choose whole numbers.</strong>
+     For z to be a whole number, x must be a multiple of 3.
+     Write x = 3k (k is a positive integer).</p>
+
+  <ul>
+    <li>Then z = 4k.</li>
+    <li>And y = 2z − x = 2·4k − 3k = 5k.</li>
+  </ul>
+
+  <p><strong>Tour length.</strong>  x + y + z = 3k + 5k + 4k = 12k.</p>
+  <p>The smallest k = 1 gives <strong>12 km</strong>.  
+     (x, y, z) = (3, 5, 4) works and no shorter whole-number choice exists.</p>
+
+  <!-- 23.3 -->
+  <h4>23.3&nbsp; New rules<br>
+      • P → R via Q is three times direct P → R. <br>
+      • P → Q via R is four times direct P → Q. <br>
+      Again find the <em>shortest</em> tour.</h4>
+
+  <p><strong>New equations.</strong></p>
+  <ul>
+    <li>x + y = <span style="white-space:nowrap;">3z</span>. &nbsp;……(1′)</li>
+    <li>y + z = 4x. &nbsp;……(2′)</li>
+  </ul>
+
+  <p><strong>Solve as before.</strong></p>
+  <ul>
+    <li>From (1′): y = 3z − x.</li>
+    <li>Put into (2′): (3z − x) + z = 4x  
+        ⇒ 4z − x = 4x  
+        ⇒ 4z = 5x  
+        ⇒ <strong>z = 5x⁄4</strong>.</li>
+    <li>So x must be a multiple of 4.  Let x = 4k.</li>
+    <li>Then z = 5k and y = 3z − x = 15k − 4k = 11k.</li>
+  </ul>
+
+  <p><strong>Tour length.</strong> x + y + z = 4k + 11k + 5k = 20k.<br>
+     Smallest k = 1 gives <strong>20 km</strong>.</p>
+
+  <p><strong>Why this method works.</strong>  Two tidy
+     equations are enough; choosing the smallest “k” that keeps all three numbers whole gives the shortest tour.</p>
+
+  <p class="follow">Follow-on: <em>Junior Kangaroo 2023 Q21</em></p>
+</details>
+  
   <!-- ─── Q24 ─────────────────────────────────────────── -->
-  <details>
-    <summary>Q24 — Divisors leaving remainder 5 when dividing 180</summary>
+<details>
+  <summary>Q24 — Numbers that leave remainder&nbsp;5</summary>
 
-    <h4>1&nbsp;Understand</h4>
-    <p>We need every integer <em>n &gt; 5</em> such that 180 ÷ <em>n</em> leaves remainder 5.</p>
+  <!-- 24.1 -->
+  <h4>24.1&nbsp; List the positive integers that leave remainder&nbsp;5 when dividing 180</h4>
 
-    <h4>2&nbsp;Plan</h4>
-    <p>Subtract the remainder first: 180 – 5 = 175.
-       List factors of 175 and keep those &gt; 5.</p>
+  <p><strong>Key idea (one line).</strong>  If 180 ÷ n leaves 5, then
+     180&nbsp;−&nbsp;5 = 175 is exactly divisible by n.</p>
 
-    <h4>3&nbsp;Do&nbsp;it</h4>
-    <p>175 = 5²×7 ⇒ factors 1, 5, 7, 25, 35, 175.<br>
-       Discard 1 and 5 → <strong>7, 25, 35, 175</strong>.</p>
+  <div class="follow" style="background:var(--yellow);padding:.4rem .8rem;border-radius:8px">
+    <strong>Why subtract first?</strong><br>
+    It turns a “remainder” puzzle into a straight factor puzzle with one smaller number.
+  </div>
 
-    <h4>4&nbsp;Look&nbsp;back</h4>
-    <ul>
-      <li>“Subtract the remainder” is the universal shortcut for these problems.</li>
-      <li>After that, it’s ordinary factor hunting.</li>
-    </ul>
+  <p><strong>Step&nbsp;1 – factor 175.</strong></p>
+  <pre>175 = 5 × 5 × 7</pre>
 
-    <p class="follow">Follow-on: <em>Junior Kangaroo 2018 Q18</em> – same remainder-factor trick with different numbers.</p>
-  </details>
+  <p><strong>Step&nbsp;2 – list all factors.</strong></p>
+  <ul class="bullet">
+    <li>1, 5, 7, 25, 35, 175.</li>
+  </ul>
 
+  <p><strong>Step&nbsp;3 – remove any factor ≤&nbsp;5</strong> (because n must be larger than the remainder 5
+     itself, or the remainder would be impossible).</p>
+
+  <p>The required numbers are <strong>7, 25, 35, 175</strong>.</p>
+
+  <!-- 24.2 -->
+  <h4>24.2&nbsp; How many positive integers leave remainder&nbsp;5 when dividing 365?</h4>
+
+  <p><strong>Step&nbsp;1 – subtract the remainder.</strong><br>
+     365 − 5 = <strong>360</strong>.</p>
+
+  <p><strong>Step&nbsp;2 – find every factor of 360.</strong>  
+     One tidy way is to list factor pairs:</p>
+
+  <pre>
+  1 × 360   2 × 180   3 × 120   4 ×  90   5 ×  72
+  6 ×  60   8 ×  45   9 ×  40  10 ×  36  12 ×  30
+ 15 ×  24  18 ×  20
+  </pre>
+
+  <p>There are 12 pairs, which makes <strong>24 factors</strong> altogether.</p>
+
+  <p><strong>Step&nbsp;3 – throw away any factor ≤&nbsp;5.</strong>  
+     Those are 1, 2, 3, 4, 5 (five numbers).</p>
+
+  <p><strong>Step&nbsp;4 – final count.</strong>  
+     24 factors minus the 5 too-small ones → <strong>19 numbers</strong>.</p>
+
+  <div class="follow" style="background:var(--yellow);padding:.4rem .8rem;border-radius:8px">
+    <strong>Why list pairs?</strong><br>
+    Writing factors in pairs guarantees you don’t miss any and stops
+    as soon as the first number in a pair passes the square root (here √360 ≈ 19).
+  </div>
+
+  <p class="follow">Follow-on: <em>Junior Kangaroo&nbsp;2018&nbsp;Q18</em></p>
+</details>
+  
   <!-- ─── Q25 ─────────────────────────────────────────── -->
-  <details>
-    <summary>Q25 — Counting right-angled &amp; isosceles triangles in a cube</summary>
+<details>
+  <summary>Q25 — Triangles whose corners are vertices of a cube</summary>
 
-    <h4>1&nbsp;Understand</h4>
-    <p>Select any 3 of the 8 cube vertices.</p>
+  <!-- 25.1 -->
+  <h4>25.1&nbsp; How many <em>right-angled</em> triangles?</h4>
 
-    <h4>2&nbsp;Plan</h4>
-    <p>Catalogue squared edge lengths (1, 2, 3) and apply Pythagoras / equal-side tests.</p>
+  <p><strong>Understand.</strong>  A cube has 8 vertices.  We must choose any 3 and see
+     whether the triangle they form is right-angled.</p>
 
-    <h4>3&nbsp;Do&nbsp;it</h4>
-    <p><strong>Right-angled.</strong></p>
-    <ul>
-      <li>(1, 1, 2) type: 3 per corner × 8 = 24.</li>
-      <li>(1, 2, 3) type: 3 per corner × 8 = 24.</li>
-      <li>Total = 48.</li>
-    </ul>
-    <p><strong>Isosceles.</strong></p>
-    <ul>
-      <li>The 24 right-angled (1, 1, 2) are already isosceles.</li>
-      <li>Add 8 equilateral √2–√2–√2 on faces → 32.</li>
-    </ul>
+  <p><strong>Plan.</strong></p>
+  <ol class="bullet">
+    <li>Write down the three different edge-lengths that can occur between two cube vertices.</li>
+    <li>Use Pythagoras (<em>a² + b² = c²</em>) to spot right triangles.</li>
+    <li>Count how many of each type there are.</li>
+  </ol>
 
-    <h4>4&nbsp;Look&nbsp;back</h4>
-    <ul>
-      <li>56 choose-3 triangles exist; 48 + 8 = 56 – sanity check passes.</li>
-      <li><strong>Catalogue → filter</strong> is unbeatable for regular lattices.</li>
-    </ul>
-  </details>
-
-  <hr>
-
-  <p class="centre"><strong>Habits from 2025</strong></p>
+  <p><strong>Step&nbsp;1 – distance “catalogue”.</strong></p>
   <table>
-    <tr><th>Habit</th><th>Appears in</th><th>Why it matters</th></tr>
-    <tr><td>Subtract equal bits from symmetry</td><td>Q21</td><td>Turns tricky shapes into clean rectangles/triangles.</td></tr>
-    <tr><td>Strip remainders first</td><td>Q22, Q24</td><td>Keeps numbers small; zero jargon.</td></tr>
-    <tr><td>One-part ratio method</td><td>Q23</td><td>Universal for any fixed-ratio problem.</td></tr>
-    <tr><td>Distance catalogue</td><td>Q25</td><td>Makes shape-classification mechanical in a lattice.</td></tr>
+    <thead><tr><th>Segment</th><th>Real length</th><th>Square of length</th></tr></thead>
+    <tbody>
+      <tr><td>Edge (two corners joined by one cube edge)</td><td>1</td><td>1</td></tr>
+      <tr><td>Face diagonal (across one square face)</td><td>√2</td><td>2</td></tr>
+      <tr><td>Space diagonal (corner to opposite corner of cube)</td><td>√3</td><td>3</td></tr>
+    </tbody>
   </table>
-</section>
 
+  <p><strong>Step&nbsp;2 – possible right-triangle shapes.</strong></p>
+  <ul class="bullet">
+    <li><strong>Type&nbsp;A:</strong> edge, edge, face-diagonal  
+        (squared: 1&nbsp;+&nbsp;1&nbsp;=&nbsp;2). Right angle sits at a cube corner.</li>
+    <li><strong>Type&nbsp;B:</strong> edge, face-diagonal, space-diagonal  
+        (1&nbsp;+&nbsp;2&nbsp;=&nbsp;3). Right angle also at a cube corner.</li>
+  </ul>
+
+  <p><strong>Step&nbsp;3 – counting each type.</strong></p>
+  <ul class="bullet">
+    <li><strong>Type&nbsp;A (edge–edge).</strong>  
+        Pick any of the 8 corners; three edges meet there, and you can choose any
+        two of them (3 ways).  
+        8 corners × 3 choices = <strong>24</strong>.</li>
+
+    <li><strong>Type&nbsp;B (edge + face diagonal).</strong>  
+        At a corner there are again 3 edges.  
+        For every edge there is exactly <em>one</em> face-diagonal through the
+        same corner that is at right angles to that edge.  
+        So 3 right-angle choices per corner, just like before.  
+        8 × 3 = <strong>24</strong>.</li>
+  </ul>
+
+  <p><strong>Total right-angled triangles = 24 + 24 =&nbsp;<span class="U">48</span>.</strong></p>
+
+  <p><strong>Look back.</strong>  Pythagoras becomes quick once you list the three
+     possible squared lengths (1, 2, 3) only once.</p>
+
+  <!-- 25.2 -->
+  <h4>25.2&nbsp; How many <em>isosceles</em> triangles?</h4>
+
+  <p><strong>Understand.</strong>  An isosceles triangle has two equal sides (they can be
+     any of the three lengths in the table).</p>
+
+  <p><strong>Plan.</strong></p>
+  <ol class="bullet">
+    <li>All 24 of the Type&nbsp;A right-angled triangles already have two
+        equal sides (edge, edge, face-diagonal).</li>
+    <li>Look for any other triangles with two equal edges among the vertex set.</li>
+  </ol>
+
+  <p><strong>Extra isosceles set – the “diamond” on each face.</strong></p>
+  <p>Pick one square face of the cube.  
+     Its four corners form two face diagonals.  
+     Choose one diagonal and one of the two remaining
+     adjacent vertices: that triangle has sides √2, √2, √2 (an equilateral
+     triangle lying flat on the face).  
+     There are 2 such triangles on each of the 6 faces → 12.  
+     But each of those equilateral triangles belongs to <em>two</em> faces, so we
+     would double-count if we multiplied by 6.  
+     The correct count is therefore <strong>8</strong> equilateral triangles in total.</p>
+
+  <p><strong>Add everything.</strong></p>
+  <ul class="bullet">
+    <li>Right-angled isosceles (Type&nbsp;A) = 24</li>
+    <li>Equilateral √2 triangles = 8</li>
+  </ul>
+
+  <p><strong>Total isosceles triangles = 24 + 8 = <span class="U">32</span>.</strong></p>
+
+  <p><strong>Look back.</strong>  The “distance catalogue then filter” trick
+     avoids messy 3-D drawings—once all lengths are known, the classification is mechanical.</p>
+</details>
+
+  <!-- ░░░ 2025 Habits Summary & General Remarks ░░░ -->
+<hr class="yearline">
+
+<h3 class="centre">2025 &nbsp;—&nbsp; Habit Round-up</h3>
+
+<table>
+  <thead>
+    <tr><th style="width:40%">Habit</th><th>Where you met it</th><th>Why keep it?</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Slide the same fraction along each edge when comparing similar shapes</td>
+      <td>Q21&nbsp;(a)&nbsp;+&nbsp;(b)</td>
+      <td>Gives one tidy scale factor (λ) for every length in the picture.</td>
+    </tr>
+    <tr>
+      <td>Subtract the remainder first, then find factors or make a short table</td>
+      <td>Q22&nbsp;&amp;&nbsp;Q24</td>
+      <td>Turns “remainder” puzzles into ordinary factor checks with smaller numbers.</td>
+    </tr>
+    <tr>
+      <td>“One-part” ratio method</td>
+      <td>Q23&nbsp;(all parts)</td>
+      <td>Divide once by the sum of the ratio numbers, then multiply &amp; adjust.</td>
+    </tr>
+    <tr>
+      <td>Translate words into exactly two neat equations, then hunt the smallest whole-number solution</td>
+      <td>Q23&nbsp;(2) &amp; (3)</td>
+      <td>Avoids long algebra and keeps every candidate visible.</td>
+    </tr>
+    <tr>
+      <td>Catalogue every possible distance in a regular 3-D grid, then filter shapes</td>
+      <td>Q25</td>
+      <td>Makes 3-D counting mechanical and avoids missed cases.</td>
+    </tr>
+    <tr>
+      <td>Sanity &amp; extreme checks</td>
+      <td>sprinkled throughout</td>
+      <td>Catches slips (e.g.&nbsp;λ&nbsp;→&nbsp;0&nbsp;or&nbsp;1, factor totals vs. 56 triangles).</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="background:var(--yellow);padding:.8rem 1rem;margin-top:1.2rem;border-radius:8px">
+  <strong>General remarks for 2025.</strong>
+  <ul style="margin-top:.4rem">
+    <li><em>Pólya in action:</em> You can spot the “Plan” phase quickly—subtract, divide, or
+        catalogue distances before any heavy calculation.</li>
+    <li>When only a few integer candidates exist (Q22), a small test table is faster
+        than inventing new symbols.</li>
+    <li>A single clever sketch (big vs. small square, cube with labelled edges) often
+        replaces pages of algebra.</li>
+    <li>Always finish with a short “look-back”: try an extreme value, count all cases,
+        or check unit consistency. Mistakes show up here with very little extra work.</li>
+  </ul>
+</div>
+<!-- ░░░ end 2025 summary ░░░ -->
+
+</section>
 
 <!-- █████ 2024 █████ -->
 <section class="invest-year" id="y2024">
-  <h2 class="centre rainbow">JMC 2024 Investigations</h2>
+  <h2 class="centre rainbow">JMC&nbsp;2024 Investigations</h2>
+
+  <p class="centre" style="margin-top:-0.5rem">
+    🔗 <a href="https://ukmt.org.uk/wp-content/uploads/2024/04/JMC-2024-Extended-Solutions-1.pdf" target="_blank">
+      Official UKMT Extended Solutions (PDF)
+    </a>
+  </p>
 
   <!-- ─── Q21 ─────────────────────────────────────────── -->
   <details>
-    <summary>Q21 — The patchwork rectangle (parts 21.1 & 21.2)</summary>
+    <summary>Q21 — The patchwork rectangle</summary>
 
-    <h3>21.1 Fraction of the big rectangle that is the large unshaded square</h3>
+    <!-- 21.1 -->
+    <h4>21.1&nbsp; Fraction of PQRS that is the large unshaded square</h4>
 
-    <ol>
-      <li><strong>Understand.</strong>  
-          The big rectangle is split into 8 squares.  
-          We know  <span style="font-family:serif;">5x = 3y</span>, where <em>x</em> = side of a small unshaded square, <em>y</em> = side of a shaded square.</li>
+    <p><em>The picture:</em> the big rectangle PQRS is tiled by 8 small squares, 5 shaded
+       (side <span class="U">y</span>) and 3 unshaded (side <span class="U">x</span>).  
+       We are told <strong>5x = 3y</strong>.</p>
 
-      <li><strong>Plan.</strong>  
-          Express every area in terms of one letter (use <em>y</em>) and take a simple fraction.</li>
-
-      <li><strong>Do it.</strong>  
-        <ul>
-          <li>Large unshaded square side = 4<em>x</em> = 4·(3<em>y</em>/5) = 12<em>y</em>/5 → area = (12<em>y</em>/5)² = 144<em>y</em>²/25.</li>
-          <li>Whole rectangle: width 4<em>x</em>+<em>y</em> = 17<em>y</em>/5, height 3<em>y</em> → area = 17·3 <em>y</em>²/5 = 51<em>y</em>²/5.</li>
-        </ul>
-        $$\text{Fraction}=\frac{144/25}{51/5}=\frac{144}{25}\times\frac{5}{51}=
-          \frac{720}{1275}=\boxed{\tfrac{48}{85}}.$$
-      </li>
-
-      <li><strong>Look back.</strong>  
-          Cancelling by 15 is a good mental check.  
-          <em>Habit learned:</em> reduce everything to one “unit side” before comparing areas.</li>
-    </ol>
-
-    <hr>
-
-    <h3>21.2 Ratio of a small unshaded square to a shaded square</h3>
-
-    <ol>
-      <li><strong>Understand.</strong> Compare areas <em>x</em>² (small unshaded) and <em>y</em>² (shaded).</li>
-      <li><strong>Plan.</strong> Use <em>x</em>=3<em>y</em>/5 again.</li>
-      <li><strong>Do it.</strong>  
-        $$x^{2}:y^{2}=\bigl(\tfrac35y\bigr)^{2}:y^{2}=9:25.$$</li>
-      <li><strong>Look back.</strong> An area-ratio is the square of a side-ratio. Keep that fact handy.</li>
-    </ol>
-
-    <p class="follow">Follow-on: <em>Junior Kangaroo 2021 Q18</em> — another composite-rectangle shaded-area fraction problem.</p>
-  </details>
-
-  <!-- ─── Q22 ─────────────────────────────────────────── -->
-  <details>
-    <summary>Q22 — (No investigation part in 2024)</summary>
-    <p><em>The 2024 paper had no “for investigation” questions attached to Q22.</em></p>
-  </details>
-
-  <!-- ─── Q23 ─────────────────────────────────────────── -->
-  <details>
-    <summary>Q23 — Stretch-and-shrink rectangles (seven-times rectangle)</summary>
-
-    <ol>
-      <li><strong>Understand.</strong>  
-          Square side <em>s</em>; rectangle length <em>s</em>/3, width <em>s</em>−7.  
-          Square area = 7× rectangle area.</li>
-
-      <li><strong>Plan.</strong>  
-          Write one area equation, solve for <em>s</em>, then 4<em>s</em> for the perimeter.</li>
-
-      <li><strong>Do it.</strong>  
-        $$s^{2}=7\left(\frac{s}{3}(s-7)\right)  
-          \Longrightarrow 3s^{2}=7s(s-7)  
-          \Longrightarrow 4s^{2}-49s=0  
-          \Longrightarrow s=\frac{49}{4}=12.25\text{ cm}.$$  
-        Perimeter = 4<em>s</em> = <strong>49 cm</strong>.</li>
-
-      <li><strong>Look back.</strong>  
-          One tidy equation was enough; no over-labelling.  
-          <em>Habit learned:</em> one equation beats two if you can get away with it.</li>
-    </ol>
-
-    <p class="follow">Follow-on: <em>Junior Kangaroo 2020 Q16</em> — same area-ratio trick with different numbers.</p>
-  </details>
-
-  <!-- ─── Q24 ─────────────────────────────────────────── -->
-  <details>
-    <summary>Q24 — Who scored what? (football grid &amp; extra goals)</summary>
-
-    <h3>24.1 Complete the results grid</h3>
-    <p>The only grid consistent with goals for/against and points is:</p>
-
-    <table>
-      <thead>
-        <tr><th>Home \ Away</th><th>Rovers</th><th>United</th><th>City</th><th>Wanderers</th></tr>
-      </thead>
-      <tbody>
-        <tr><th>Rovers</th><td>–</td><td>3 – 0</td><td>1 – 0</td><td>1 – 0</td></tr>
-        <tr><th>United</th><td>0 – 3</td><td>–</td><td>3 – 3</td><td>0 – 0</td></tr>
-        <tr><th>City</th><td>0 – 1</td><td>3 – 3</td><td>–</td><td>1 – 0</td></tr>
-        <tr><th>Wanderers</th><td>0 – 1</td><td>0 – 0</td><td>0 – 1</td><td>–</td></tr>
-      </tbody>
-    </table>
-
-    <ul>
-      <li>Rovers 5 GF, 0 GA → 3 wins.</li>
-      <li>United 3 GF, 6 GA → 0 W 2 D 1 L.</li>
-      <li>City 4 GF, 4 GA → 1 W 1 D 1 L.</li>
-      <li>Wanderers 0 GF, 2 GA → 0 W 1 D 2 L.</li>
+    <p><strong>Step&nbsp;1 – express every side with one letter.</strong></p>
+    <ul class="bullet">
+      <li><span class="U">x = 3y⁄5</span> (from 5x = 3y).</li>
+      <li>Width of PQRS = 4x + y  
+          = 4·(3y⁄5) + y = 12y⁄5 + 5y⁄5 = 17y⁄5.</li>
+      <li>Height of PQRS = 3y.</li>
     </ul>
 
-    <h3>24.2 Extra goals for City to win</h3>
-    <p>Points: Rovers 6, City 3, United 2, Wanderers 1.  
-       If City turns the 0-1 loss to Rovers into a 2-1 win (needs <strong>2 extra goals</strong>):  
-       • City +2 pts (→ 5), Rovers −2 pts (→ 4).  
-       City wins the league; no other match must change.</p>
+    <p><strong>Step&nbsp;2 – area of PQRS.</strong>  
+       (17y⁄5) × (3y) = 51y²⁄5.</p>
 
-    <p><em>Habit learned:</em> tweak only the matches involving the team you optimise; recount points before thinking of goal difference.</p>
+    <p><strong>Step&nbsp;3 – area of the <em>large</em> unshaded square.</strong>  
+       Its side is 4x  
+       = 4·(3y⁄5) = 12y⁄5,  
+       so area = (12y⁄5)² = 144y²⁄25.</p>
 
-    <p class="follow">Follow-on: <em>Junior Kangaroo 2023 Q22</em> — another round-robin table deduction.</p>
+    <p><strong>Step&nbsp;4 – form the fraction.</strong></p>
+    <div style="margin-left:1.2rem">
+      (area big unshaded) ÷ (area PQRS)<br>
+      = (144y²⁄25) ÷ (51y²⁄5)<br>
+      = (144/25) × (5/51) = 720/1275 = <strong>48⁄85</strong>.
+    </div>
+
+    <p><strong>Answer:</strong> <span class="U">48⁄85</span>.</p>
+
+    <!-- 21.2 -->
+    <h4>21.2&nbsp; Ratio of a small unshaded square to a shaded square</h4>
+
+    <p><strong>Step&nbsp;1 – write both areas.</strong></p>
+    <ul class="bullet">
+      <li>Small unshaded square = x².</li>
+      <li>Shaded square = y².</li>
+    </ul>
+
+    <p><strong>Step&nbsp;2 – link x and y.</strong>  
+       From 5x = 3y ⇒ x = 3y⁄5.</p>
+
+    <p><strong>Step&nbsp;3 – form the ratio.</strong></p>
+    <div style="margin-left:1.2rem">
+      x² : y² = (3y⁄5)² : y² = 9 : 25.
+    </div>
+
+    <p><strong>Answer:</strong> <span class="U">9 : 25</span>.</p>
+
+    <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+      <strong>Why this method?</strong><br>
+      • Turn every unknown side into one letter (here <span class="U">y</span>).<br>
+      • Work with areas last; most fractions then collapse cleanly.<br>
+      • Remember: area-ratio = (side-ratio)² for similar squares.
+    </div>
+
+    <p class="follow">Follow-on: <em>Junior Kangaroo&nbsp;2021&nbsp;Q18</em></p>
   </details>
+
+  <!-- (Q22 had no investigation) -->
+  
+<!-- ─── Q23 ─────────────────────────────────────────── -->
+<details>
+  <summary>Q23 — A square and a rectangle share a clever area link</summary>
+
+  <h4>23.1&nbsp; The square’s perimeter when its area is seven times that of the rectangle</h4>
+
+  <p><strong>Problem restated in plain words.</strong><br>
+     • Let the square’s side be <span class="U">s&nbsp;cm</span>.<br>
+     • The rectangle is <span class="U">one&nbsp;third</span> as long as the square and<br>
+       &nbsp;&nbsp;&nbsp;its width is <span class="U">7 cm less</span> than the square’s side.</p>
+
+  <p><strong>1&nbsp;Understand.</strong></p>
+  <ul class="bullet">
+    <li>Square area = <span class="U">s²</span>.</li>
+    <li>Rectangle length = s⁄3.</li>
+    <li>Rectangle width = s − 7.</li>
+    <li>The square’s area is 7 × rectangle’s area.</li>
+  </ul>
+
+  <p><strong>2&nbsp;Plan (one clean equation).</strong><br>
+     Write square area = 7 × rectangle area, then solve for <span class="U">s</span>.  
+     Finally multiply by 4 for the perimeter.</p>
+
+  <p><strong>3&nbsp;Do it step-by-step.</strong></p>
+
+  <div style="margin-left:1rem">
+    <p><em>Area equation</em></p>
+    <div style="white-space:nowrap">
+      s² = 7 × (s⁄3)(s − 7)
+    </div>
+
+    <p><em>Clear the fraction</em> (multiply both sides by 3)</p>
+    <div style="white-space:nowrap">
+      3s² = 7s(s − 7)
+    </div>
+
+    <p><em>Expand and tidy</em></p>
+    <div style="white-space:nowrap">
+      3s² = 7s² − 49s &nbsp;⇒&nbsp; 4s² − 49s = 0
+    </div>
+
+    <p><em>Factor out s</em></p>
+    <div style="white-space:nowrap">
+      s(4s − 49) = 0
+    </div>
+
+    <p><em>Ignore s = 0 (side length can’t be 0)</em></p>
+    <div style="white-space:nowrap">
+      4s − 49 = 0 &nbsp;⇒&nbsp; s = 49⁄4 = 12.25 cm
+    </div>
+
+    <p><em>Perimeter of the square</em></p>
+    <div style="white-space:nowrap">
+      4 × 12.25 cm = <strong class="U">49 cm</strong>
+    </div>
+  </div>
+
+  <p><strong>4&nbsp;Look back.</strong></p>
+  <ul class="bullet">
+    <li>We solved with one tidy equation—no need for separate variables for the rectangle.</li>
+    <li>Divide by s early (after checking s ≠ 0) to keep numbers small.</li>
+    <li>Extreme test: if the “7 cm less” were “0 cm less,” the rectangle would equal the square and the factor 7 would fail—good reason to trust our algebra.</li>
+  </ul>
+
+  <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+    <strong>Why write just one equation?</strong><br>
+    Introducing extra letters (for rectangle area or perimeter) only creates
+    more work.  A single, carefully built area equation is quicker and less error-prone.
+  </div>
+
+  <p class="follow">Follow-on: <em>Junior&nbsp;Kangaroo 2020 Q16</em></p>
+</details>
+
+  <!-- ─── Q24 ─────────────────────────────────────────── -->
+<details>
+  <summary>Q24 — Four-team football tournament</summary>
+
+  <!-- 24.1 -->
+  <h4>24.1&nbsp; Complete the “goals for / goals against” table</h4>
+
+  <p><strong>Given facts (from the question).</strong></p>
+  <ul class="bullet">
+    <li>Rovers scored&nbsp;5 goals and <em>conceded&nbsp;0</em> in their 3 matches.</li>
+    <li>United scored&nbsp;3 and conceded&nbsp;6.</li>
+    <li>City scored&nbsp;4 and conceded&nbsp;4.</li>
+    <li>Wanderers scored&nbsp;0 and conceded&nbsp;2.</li>
+  </ul>
+
+  <p><strong>Plan.</strong>  Start with Rovers, the only team that never conceded.
+     Work through each row/column, one blank at a time.</p>
+
+  <!-- completed grid -->
+  <table style="margin-bottom:.8rem">
+    <caption style="caption-side:bottom"><em>Table&nbsp;A – completed score grid</em></caption>
+    <thead>
+      <tr><th rowspan="2">Goals<br>against&nbsp;↓<br>for&nbsp;→</th><th colspan="4">Goals&nbsp;for</th></tr>
+      <tr><th>R</th><th>U</th><th>C</th><th>W</th></tr>
+    </thead>
+    <tbody>
+      <tr><th>Rovers</th>     <td class="centre">×</td><td class="centre">3–0</td><td class="centre">1–0</td><td class="centre">1–0</td></tr>
+      <tr><th>United</th>     <td class="centre">0–3</td><td class="centre">×</td><td class="centre">3–3</td><td class="centre">0–0</td></tr>
+      <tr><th>City</th>       <td class="centre">0–1</td><td class="centre">3–3</td><td class="centre">×</td><td class="centre">1–0</td></tr>
+      <tr><th>Wanderers</th>  <td class="centre">0–1</td><td class="centre">0–0</td><td class="centre">0–1</td><td class="centre">×</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Why this is the <em>only</em> solution.</strong></p>
+  <ol class="bullet">
+    <li><strong>Rovers never concede</strong> &nbsp;→ every score in column “R” has 0 for Rovers’ opponent.</li>
+    <li><strong>Rovers scored 5 total.</strong>  Already used 3+1+1 = 5 in row “R” → locked.</li>
+    <li><strong>Wanderers scored 0 in total.</strong> &nbsp;→ every entry in row “W” is 0.</li>
+    <li><strong>United have +3 goals left to score.</strong>  Only two matches left: vs City and vs Wanderers.<br>
+        The only way to split their 3 goals and keep City’s totals balanced is 3–3 (vs City) and 0–0 (vs Wanderers).</li>
+    <li>Now City’s goals tally forces the remaining blanks to be 1–0 and 0–1, completing the grid.</li>
+  </ol>
+
+  <!-- 24.2 -->
+  <h4>24.2&nbsp; Fewest extra goals City need to win the league</h4>
+
+  <p><strong>Scoring system.</strong>  Win = 2 points, draw = 1 point, loss = 0.</p>
+
+  <!-- points table -->
+  <table style="margin:0 0 .8rem 0">
+    <caption style="caption-side:bottom"><em>Table&nbsp;B – points before any change</em></caption>
+    <thead>
+      <tr><th>Team</th><th>W</th><th>D</th><th>L</th><th>Points</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Rovers</td><td class="centre">3</td><td class="centre">0</td><td class="centre">0</td><td class="centre">6</td></tr>
+      <tr><td>City</td><td class="centre">1</td><td class="centre">1</td><td class="centre">1</td><td class="centre">3</td></tr>
+      <tr><td>United</td><td class="centre">0</td><td class="centre">2</td><td class="centre">1</td><td class="centre">2</td></tr>
+      <tr><td>Wanderers</td><td class="centre">0</td><td class="centre">1</td><td class="centre">2</td><td class="centre">1</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Idea.</strong>  Tweak only City’s own matches; that changes points for both teams involved.</p>
+
+  <p><strong>The critical match:</strong> Rovers 1 – 0 City.</p>
+  <ul class="bullet">
+    <li>If City score 2 more goals in that match, the result flips to <strong>2 – 1 in City’s favour</strong>.</li>
+    <li>Points swing: City gain +2 (from 0 → 2), Rovers lose −2 (from 2 → 0).</li>
+  </ul>
+
+  <table style="margin:0 0 .8rem 0">
+    <caption style="caption-side:bottom"><em>Table&nbsp;C – points after adding 2 goals to City</em></caption>
+    <thead>
+      <tr><th>Team</th><th>New&nbsp;Points</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>City</td><td class="centre"><strong>5</strong></td></tr>
+      <tr><td>Rovers</td><td class="centre">4</td></tr>
+      <tr><td>United</td><td class="centre">2</td></tr>
+      <tr><td>Wanderers</td><td class="centre">1</td></tr>
+    </tbody>
+  </table>
+
+  <p>City now top the table with <strong>5 points</strong>.</p>
+  <p><strong>Answer:</strong> the smallest possible is <span class="U">2 extra goals</span>.</p>
+
+  <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+    <strong>Why only one match needs changing.</strong><br>
+    Altering City’s game against any other team changes <em>both</em> teams’ points at once.
+    Flipping their loss to Rovers is the quickest way to swing the total by 4 points
+    (-2 for Rovers, +2 for City) in one go.
+  </div>
+
+  <p class="follow">Follow-on: <em>Junior&nbsp;Kangaroo 2023&nbsp;Q22</em></p>
+</details>
 
   <!-- ─── Q25 ─────────────────────────────────────────── -->
-  <details>
-    <summary>Q25 — Eye colour &amp; handedness</summary>
+<details>
+  <summary>Q25 — Right-handed, left-handed and blue eyes</summary>
 
-    <ol>
-      <li><strong>Understand.</strong> Let the whole school = 1.  
-          Left-handed = 1⁄9; blue-eyed left-handers = (1⁄6)(1⁄9)=1⁄54.  
-          Overall blue-eyed = ¼.</li>
+  <h4>25.1&nbsp; Fraction of right-handers who have blue eyes</h4>
 
-      <li><strong>Plan.</strong> Let <em>x</em> = fraction of right-handers who are blue.  
-          Build one balance-equation.</li>
+  <p><strong>Problem facts.</strong></p>
+  <ul class="bullet">
+    <li>Eight-ninths of the pupils are <em>right-handed</em>.</li>
+    <li>One-ninth are <em>left-handed</em> (because 1 − 8⁄9 = 1⁄9).</li>
+    <li>One-sixth of the <em>left-handers</em> have blue eyes.</li>
+    <li>Altogether, one-quarter of <em>all</em> pupils have blue eyes.</li>
+    <li>Question: what fraction of the right-handers have blue eyes?</li>
+  </ul>
 
-      <li><strong>Do it.</strong>  
-        $$\tfrac14 = \tfrac1{54} + \tfrac89\,x  
-          \;\;\Longrightarrow\;\; x = \frac{25}{96}.$$  
-        So <strong>25⁄96</strong> of right-handers have blue eyes.</li>
+  <p><strong>1&nbsp;Understand.</strong>  Working with one big number can be messy,
+     so treat the whole school as “1 unit”.  Then every statement above becomes a simple fraction.</p>
 
-      <li><strong>Look back.</strong> Single tidy equation beats piecemeal logic.  
-          <em>Habit learned:</em> write “fraction of whole = sum of parts.”</li>
-    </ol>
+  <p><strong>2&nbsp;Plan.</strong></p>
+  <ol class="bullet">
+    <li>Write an equation:  
+        (blue-eyed left-handers) + (blue-eyed right-handers) = 1⁄4.</li>
+    <li>We already know the first bracket; call the second bracket <em>x</em> (the answer we need).</li>
+  </ol>
 
-    <p class="follow">Follow-on: <em>JMO 2023 Q9</em> — similar subgroup-fraction equation with different numbers.</p>
-  </details>
+  <p><strong>3&nbsp;Do it step-by-step.</strong></p>
 
-  <hr>
-  <p class="centre"><strong>Quick habit round-up (2024)</strong></p>
-  <table>
-    <tr><th>Habit</th><th>Appears in</th><th>Why keep it?</th></tr>
-    <tr><td>One-letter area comparisons</td><td>21.1 & 21.2</td><td>Simplifies ratio problems.</td></tr>
-    <tr><td>One equation is enough</td><td>23.1</td><td>Avoid over-labelling.</td></tr>
-    <tr><td>Edit only the key match</td><td>24.2</td><td>Minimises work in tournament puzzles.</td></tr>
-    <tr><td>Whole = part + part equation</td><td>25.1</td><td>Automatic for percentage/fraction puzzles.</td></tr>
-  </table>
+  <ul>
+    <li><em>Left-handed fraction</em> = 1⁄9.</li>
+    <li><em>Blue-eyed left-handers</em> = (1⁄6 of 1⁄9) = 1⁄54.</li>
+    <li><em>Right-handed fraction</em> = 8⁄9.</li>
+    <li>Let <span class="U">x</span> = fraction of right-handers with blue eyes.<br>
+        Then blue-eyed right-handers = (8⁄9) × x.</li>
+  </ul>
+
+  <p><em>Balance of blue eyes for the whole school</em></p>
+  <div style="margin-left:1rem">
+    1⁄54 &nbsp;+&nbsp; (8⁄9)·x = 1⁄4
+  </div>
+
+  <p><em>Work it out.</em></p>
+  <div style="margin-left:1rem">
+    (8⁄9)·x = 1⁄4 − 1⁄54<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;= (27⁄108) − (2⁄108) = 25⁄108<br><br>
+    x = (25⁄108) × (9⁄8) &nbsp;=&nbsp; 225⁄864 &nbsp;=&nbsp; <strong>25⁄96</strong>.
+  </div>
+
+  <p><strong>Answer:</strong> <span class="U">25⁄96</span> of the right-handed pupils have blue eyes.</p>
+
+  <p><strong>4&nbsp;Look back.</strong></p>
+  <ul class="bullet">
+    <li>Working with “1 unit” avoided hunting for a common total.</li>
+    <li>If only 1⁄5 of all pupils had blue eyes the same method would still work—just change the final 1⁄4.</li>
+  </ul>
+
+  <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+    <strong>Why a single equation?</strong><br>
+    Writing “fraction of the <em>whole</em> = part + part” is quicker (and safer) than separate percentage trees.
+  </div>
+
+  <p class="follow">Follow-on: <em>JMO&nbsp;2023 Q9</em></p>
+</details>
+  
+<!-- ░░░ 2024 Habit & Remarks Summary ░░░ -->
+<hr class="yearline">
+
+<h3 class="centre">2024 &nbsp;—&nbsp; Habit Round-up</h3>
+
+<table>
+  <thead>
+    <tr><th style="width:40%">Habit</th><th>Where you met it</th><th>Why keep it?</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Turn every unknown side into <em>one</em> letter, then compare areas</td>
+      <td>Q21&nbsp;(patchwork rectangle)</td>
+      <td>Saves you from juggling two variables at once.</td>
+    </tr>
+    <tr>
+      <td>Area-ratio ➔ length-ratio is “take the square root”</td>
+      <td>Q21&nbsp;(b)</td>
+      <td>Works for any pair of similar shapes (not just squares).</td>
+    </tr>
+    <tr>
+      <td>Build <strong>one</strong> neat equation, then solve step-by-step</td>
+      <td>Q23&nbsp;(square vs rectangle)</td>
+      <td>Reduces clutter and reveals the answer faster.</td>
+    </tr>
+    <tr>
+      <td>Fill a results grid systematically: start with the team that has an extreme total</td>
+      <td>Q24&nbsp;(football)</td>
+      <td>Prevents contradictions and guarantees you don’t miss a match.</td>
+    </tr>
+    <tr>
+      <td>Change the <em>critical</em> game first when you want the biggest point swing</td>
+      <td>Q24&nbsp;(extra goals for&nbsp;City)</td>
+      <td>Avoids wasting effort on matches that don’t change the leaderboard enough.</td>
+    </tr>
+    <tr>
+      <td>“Fraction of the whole = part&nbsp;+ part”</td>
+      <td>Q25&nbsp;(handedness &amp; blue eyes)</td>
+      <td>A single balance equation is quicker than separate percentage trees.</td>
+    </tr>
+    <tr>
+      <td>Finish with a quick sense-check or extreme-value test</td>
+      <td>sprinkled throughout</td>
+      <td>Catches slips before they become exam-losing errors.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="background:var(--yellow);padding:.8rem 1rem;margin-top:1.2rem;border-radius:8px">
+  <strong>General remarks for 2024.</strong>
+  <ul style="margin-top:.4rem">
+    <li><em>Less algebra, more structure:</em> each problem falls quickly once you draw a tidy
+        grid (football), a single labelled diagram (patchwork rectangle), or one balanced
+        fraction equation (blue-eyes puzzle).</li>
+    <li>Look for <em>extreme clues</em> first: a team that concedes zero goals or scores none,
+        a square that “overpowers” a rectangle by a factor of seven – these clues lock down
+        the rest of the numbers.</li>
+    <li>Almost every question ends with a brief “look-back” step.  
+        Five seconds checking units, totals or edge-cases often saves five marks.</li>
+  </ul>
+</div>
+<!-- ░░░ end 2024 summary ░░░ -->
+
 </section>
 
 
 <!-- █████ 2023 █████ -->
 <section class="invest-year" id="y2023">
-  <h2 class="centre rainbow">JMC 2023 Investigations</h2>
+  <h2 class="centre rainbow">JMC&nbsp;2023 Investigations</h2>
 
-  <!-- ─── Q21 ─────────────────────────────────────────── -->
+  <p class="centre" style="margin-top:-0.5rem">
+    🔗 <a href="https://ukmt.org.uk/wp-content/uploads/2023/08/JMC-2023-Extended-Solutions_0.pdf" target="_blank">
+      Official UKMT Extended Solutions (PDF)
+    </a>
+  </p>
+
+ <!-- ─── Q21 ─────────────────────────────────────────── -->
   <details>
-    <summary>Q21 — Eleanor’s livestock → Sheila’s Sheep</summary>
+    <summary>Q21 — Sheila’s Sheep Shop</summary>
 
-    <h4>Investigation 21.1</h4>
-    <blockquote><p><strong>Cheviots (C)</strong>, Suffolks, Dorsets, Herdwicks.<br>
-      • Herdwicks = ½ Dorsets • Dorsets = 2 × Suffolks • Suffolks = 6 × Cheviots • Herdwicks = Cheviots + 20.<br>
-      How many sheep altogether?</p></blockquote>
+    <h4>21.1&nbsp; How many sheep does Sheila have in total?</h4>
 
-    <table>
-      <tr><th>Step</th><th>Reasoning</th></tr>
-      <tr><td><strong>Understand</strong></td><td>Four links form a <em>chain of ratios</em>.</td></tr>
-      <tr><td><strong>Plan</strong></td><td>Pin everything to the <strong>smallest breed</strong> (Cheviots).</td></tr>
-      <tr><td><strong>Do</strong></td><td>
-        Let C = number of Cheviots.<br>
-        Suffolks = 6C.<br>
-        Dorsets = 2 × 6C = 12C.<br>
-        Herdwicks = ½ × 12C = 6C.<br>
-        But Herdwicks = Cheviots + 20 ⇒ 6C = C + 20 ⇒ C = 4.<br>
-        Total = C + 6C + 12C + 6C = 25C = 100.
-      </td></tr>
-      <tr><td><strong>Look back</strong></td><td>Ratios became <em>multiples of one letter</em>; no extra equations needed.</td></tr>
-    </table>
-
-    <p class="follow">Follow-on: <em>Junior Kangaroo 2019 Q1</em> – two-step animal-ratio puzzle with a fixed total.</p>
-    <p><strong>Habit – “Ratio ladder”</strong>: Start with the smallest unit and climb; each rung is a simple × or ÷.</p>
-  </details>
-
-  <!-- ─── Q22 ─────────────────────────────────────────── -->
-  <details>
-    <summary>Q22 — 1-to-9 product grid</summary>
-
-    <h4>Investigations 22.1 &amp; 22.2</h4>
-
-    <p><strong>22.1 — Proving the original grid can be filled.</strong></p>
-    <ol>
-      <li><strong>Understand.</strong> Six products already force 7, 5, 3, 2, 6 into the exact cells shown in the booklet; five digits remain.</li>
-      <li><strong>Plan.</strong> Work <em>systematically</em> with the leftover equations <code>ab = 9, ag = 15, bh = 36</code>.</li>
-      <li><strong>Do.</strong> From <code>ag = 15</code> and no repeats, the only (a, g) is (3, 5) but 3 and 5 are used.  
-        Solution: swap row/column labels (rotate grid) → arrangement  
-        <pre>6 1 3<br>7 5 9<br>2 8 4</pre></li>
-      <li><strong>Look back.</strong> Quick sketching arrows for rows/columns avoids label mix-ups.</li>
-    </ol>
-
-    <p><strong>22.2 — Other product patterns.</strong></p>
-    <ul>
-      <li><em>Unique-prime-factor test</em> (like the 7-and-5 argument) knocks out impossible layouts.</li>
-      <li><em>Size test</em> – any sub-product exceeding 72 (= 8×9) cannot be made with two unused digits.</li>
-      <li>Apply row-by-row: each pattern either collapses or yields one workable grid.</li>
+    <p><strong>Information given.</strong></p>
+    <ul class="bullet">
+      <li>Cheviots → Suffolks → Dorsets → Herdwicks form a <em>ratio chain</em>.</li>
+      <li>Six times as many Suffolks as Cheviots.</li>
+      <li>Dorsets are twice the number of Suffolks.</li>
+      <li>Herdwicks are half the number of Dorsets.</li>
+      <li>There are 20 <em>more</em> Herdwicks than Cheviots.</li>
     </ul>
 
-    <p class="follow">Follow-on: <em>Cayley Olympiad 2023 Q5</em> – another 3×3 product-grid puzzle using the same factor-placement logic.</p>
-    <p><strong>Habit – “Sketch &amp; label first”</strong>: A tiny diagram often prevents index blunders.</p>
+    <p><strong>1&nbsp;Understand.</strong>  
+       Work up the chain starting from the smallest group (Cheviots).</p>
+
+    <p><strong>2&nbsp;Plan.</strong>  
+       Call the number of Cheviots <span class="U">C</span>.  
+       Express every other breed in terms of <span class="U">C</span>.</p>
+
+    <p><strong>3&nbsp;Do it step-by-step.</strong></p>
+    <ul>
+      <li>Cheviots&nbsp;=&nbsp;<span class="U">C</span></li>
+      <li>Suffolks&nbsp;=&nbsp;<span class="U">6C</span> &nbsp;(“six times”)</li>
+      <li>Dorsets&nbsp;=&nbsp;<span class="U">12C</span> &nbsp;(double the Suffolks)</li>
+      <li>Herdwicks&nbsp;=&nbsp;<span class="U">6C</span> &nbsp;(half the Dorsets)</li>
+    </ul>
+
+    <p><em>Use the final clue.</em></p>
+    <div style="margin-left:1rem">
+      Herdwicks = Cheviots + 20<br>
+      6C = C + 20 &nbsp;⇒&nbsp; 5C = 20 &nbsp;⇒&nbsp; <strong>C = 4</strong>
+    </div>
+
+    <p><strong>Find every breed.</strong></p>
+    <ul class="bullet">
+      <li>Cheviots&nbsp;=&nbsp;4</li>
+      <li>Suffolks&nbsp;=&nbsp;6 × 4 = 24</li>
+      <li>Dorsets&nbsp;=&nbsp;12 × 4 = 48</li>
+      <li>Herdwicks&nbsp;=&nbsp;6 × 4 = 24</li>
+    </ul>
+
+    <p><strong>Total sheep.</strong></p>
+    <div style="margin-left:1rem">
+      4 + 24 + 48 + 24 = <strong class="U">100</strong>
+    </div>
+
+    <p><strong>4&nbsp;Look back.</strong></p>
+    <ul class="bullet">
+      <li>The ratio ladder (multiply then divide) avoided simultaneous equations.</li>
+      <li>Always start the ladder with the breed that has a direct “+ 20” or “× 6” clue.</li>
+      <li>Quick check: Herdwicks – Cheviots = 24 − 4 = 20 ✔︎</li>
+    </ul>
+
+    <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+      <strong>Habit highlighted.</strong><br>
+      <em>Ratio ladder.</em>  Start at the smallest unit, climb up one rung at a time
+      using the given multipliers or dividers, then plug in the final “add 20” type clue.
+    </div>
+
+    <p class="follow">Follow-on: <em>Junior Kangaroo 2019 Q12</em></p>
   </details>
 
-  <!-- ─── Q23 ─────────────────────────────────────────── -->
-  <details>
-    <summary>Q23 — Pentagon geometry</summary>
+<!-- ─── Q22 ─────────────────────────────────────────── -->
+<details>
+  <summary>Q22 — 3 × 3 product grid with the numbers&nbsp;1 to 9</summary>
 
-    <h4>23.1 — Prove ∠SHO = ∠RHO = 90°</h4>
-    <table>
-      <tr><th>Step</th><th>Reasoning</th></tr>
-      <tr><td><strong>Understand</strong></td><td>Regular pentagon ⇒ equal sides/angles, centre O gives five 72° sectors.</td></tr>
-      <tr><td><strong>Plan</strong></td><td>Show two triangles are <em>SSS congruent</em>; use them inside kites whose diagonals are ⟂.</td></tr>
-      <tr><td><strong>Do</strong></td><td>
-        ΔQOP and ΔTOP: OQ = OT (radii), OP common, QP = PT (sides of pentagon) ⇒ congruent.  
-        Hence ∠QPO = ∠TPO.  
-        Quadrilateral PT SH is a kite (two equal pairs) ⇒ diagonals perpendicular ⇒ ∠SHO = 90°.  
-        Same for PQRH ⇒ ∠RHO = 90°.
-      </td></tr>
-      <tr><td><strong>Look back</strong></td><td>What seemed “magic symmetry” is just SSS + kite facts.</td></tr>
-    </table>
+  <!-- 22.1 -->
+  <h4>22.1&nbsp; Show that one filling is possible</h4>
 
-    <h4>23.2 — Interior-angle-sum formula</h4>
-    <ol>
-      <li>Slice any n-gon into (n−2) triangles ⇒ sum = (n−2)·180°.</li>
-      <li>Quadrilateral (n = 4) ⇒ 360°.</li>
-      <li>Pentagon (n = 5) ⇒ 540° total, 108° each.</li>
-    </ol>
+  <p><strong>Understand.</strong>  
+     We must place the digits 1-9 so the row-products are 18, 105, 192 and the column-products are 56, 180, 36.</p>
 
-    <p class="follow">Follow-on: <em>JMO 2023 Q7</em> – similar angle-chase in a regular polygon using congruent triangles.</p>
-    <p><strong>Habit – “Name the shapes, then prove.”</strong></p>
-  </details>
+  <p><strong>Plan.</strong>  
+     Use the <em>anchor-prime idea</em>: if a prime shows up in exactly one row-product and one column-product, its cell is fixed.</p>
 
-  <!-- ─── Q24 ─────────────────────────────────────────── -->
-  <details>
-    <summary>Q24 — Birth-year digit puzzles</summary>
+  <p><strong>Do.</strong></p>
+  <ul class="bullet">
+    <li>Prime&nbsp;7 appears only in 56 (column 1) and 105 (row 2) → put 7 at (row 2, col 1).</li>
+    <li>Prime&nbsp;5 appears only in 105 (row 2) and 180 (column 2) → put 5 at (row 2, col 2).</li>
+    <li>Divide the affected products:<br>
+        • C1 becomes 56 ÷ 7 = 8; R2 becomes 105 ÷ (7·5)=3; C2 becomes 180 ÷ 5=36.</li>
+    <li>Now 8 (C1) appears only in R3’s 192 → place 8 at (R3,C1).  
+        Continue dividing; each blank becomes forced.</li>
+  </ul>
 
-    <h4>24.1 — Option E check</h4>
-    <p>Born 2015 → age 2035 = 20; digit-sum(2035)=10; 20 = 2×10 ✔.</p>
+  <p><em>Resulting grid:</em></p>
+  <table style="margin-bottom:.4rem">
+    <tbody>
+      <tr><td class="centre">1</td><td class="centre">9</td><td class="centre">2</td></tr>
+      <tr><td class="centre">7</td><td class="centre">5</td><td class="centre">3</td></tr>
+      <tr><td class="centre">8</td><td class="centre">4</td><td class="centre">6</td></tr>
+    </tbody>
+  </table>
 
-    <h4>24.2 — Why 11x + 2y = 21 has only x = 1, y = 5</h4>
-    <p>11-jump is large; test x = 0,1,2: only x = 1 leaves remainder 10; 10 = 2y ⇒ y = 5.</p>
+  <p><strong>Look&nbsp;back.</strong>  
+     Row check → 18, 105, 192; column check → 56, 180, 36.  
+     All digits 1-9 used once, so the placement works.</p>
 
-    <h4>24.3 — Why 8w − z = 19 has only w = 3, z = 5</h4>
-    <p>8w must end 4 to give 9 after subtracting z: smallest 8w=24 ⇒ z=5, w=3.</p>
+  <!-- 22.2 -->
+  <h4>22.2&nbsp; Two new grids – decide if they are possible</h4>
 
-    <h4>24.4 — Pat’s birth year</h4>
-    <p>Year = 19ab. Age eqn ⇒ 13a+4b=93 ⇒ (a,b)=(5,7) ⇒ <strong>1957</strong>.</p>
+  <!-- Case (a) -->
+  <h5 style="margin-top:.6rem">(a)&nbsp; Row 80 / 189 / 24 &nbsp;•&nbsp; Column 56 / 45 / 144</h5>
 
-    <h4>24.5 — Crown year of King Mindaugas</h4>
-    <p>Year = 12ab. Eqn 80a+71b=613 ⇒ (a,b)=(5,3) ⇒ <strong>1253</strong>.</p>
+  <p><strong>Understand.</strong>  
+     Same task with a new set of six products.</p>
 
-    <p><strong>Habit – “Digits → tiny equations”</strong>: two digits → max 100 tests.</p>
-    <p class="follow">Follow-on: <em>Junior Kangaroo 2022 Q9</em> – birthday digit-sum puzzle using the same modular trick.</p>
-  </details>
+  <p><strong>Plan.</strong>  
+     Apply the anchor-prime test again.</p>
+
+  <p><strong>Do.</strong></p>
+  <ul class="bullet">
+    <li>Prime&nbsp;7 only in 56 (C1) &amp; 189 (R2) → 7 at (R2,C1).</li>
+    <li>Prime&nbsp;5 only in 45 (C2) &amp; 80 (R1) → 5 at (R1,C2).</li>
+    <li>Divide and finish — every remaining blank is forced.</li>
+  </ul>
+
+  <p><em>One valid grid:</em></p>
+  <table style="margin-bottom:.4rem">
+    <tbody>
+      <tr><td class="centre">2</td><td class="centre">5</td><td class="centre">8</td></tr>
+      <tr><td class="centre">7</td><td class="centre">9</td><td class="centre">3</td></tr>
+      <tr><td class="centre">4</td><td class="centre">1</td><td class="centre">6</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Look&nbsp;back.</strong>  
+     Row check → 80, 189, 24; column check → 56, 45, 144 – so this grid is possible.</p>
+
+  <!-- Case (b) -->
+  <h5>(b)&nbsp; Row 72 / 140 / 36 &nbsp;•&nbsp; Column 48 / 168 / 90</h5>
+
+  <p><strong>Understand.</strong>  
+     Same rules, different numbers.</p>
+
+  <p><strong>Plan.</strong>  
+     Try the anchor-prime test first; if it fails, look for a contradiction.</p>
+
+  <p><strong>Do.</strong></p>
+  <ul class="bullet">
+    <li>Prime&nbsp;7 appears in <em>every</em> row-product and in two column-products (168, 90).  
+        That would force the digit 7 to occupy at least three different cells — impossible with only one 7.</li>
+  </ul>
+
+  <p><strong>Look&nbsp;back.</strong>  
+     No arrangement can work; the grid is impossible.</p>
+
+  <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+    <strong>Anchor-prime habit.</strong><br>
+    • Prime shows up once in a row-product &amp; once in a column-product → cell fixed.<br>
+    • Prime shows up many times → likely clash → quick impossibility proof.
+  </div>
+
+  <p class="follow">Follow-on: <em>Junior Kangaroo 2022 Q14</em></p>
+</details>
+
+
+<!-- ─── Q23 ─────────────────────────────────────────── -->
+<details>
+  <summary>Q23 — Regular-pentagon geometry</summary>
+
+  <!-- 23.1 -->
+  <h4>23.1&nbsp; Making the “symmetry” precise</h4>
+
+  <p>The picture shows a regular pentagon <strong>PQRST</strong> with centre <strong>O</strong>.  
+     Points <strong>H, I, J, …</strong> mark feet of perpendiculars from O to the
+     sides, forming five equal 60° wedges at the centre.</p>
+
+  <h5>(a)&nbsp; Prove triangles <em>QOP</em> and <em>TOP</em> are congruent</h5>
+
+  <p><strong>1&nbsp;Understand.</strong></p>
+  <ul class="bullet">
+    <li>Both triangles share side <span class="U">OP</span>.</li>
+    <li>OQ = OT (radii of the same circle).</li>
+    <li>QP = PT (all edges of a regular pentagon are equal).</li>
+  </ul>
+
+  <p><strong>2&nbsp;Plan.</strong> Use the <em>SSS rule</em> (three equal sides give congruent triangles).</p>
+
+  <p><strong>3&nbsp;Do it.</strong></p>
+  <div style="margin-left:1rem">
+    • Side&nbsp;1: OQ = OT (radii)<br>
+    • Side&nbsp;2: QP = PT (equal pentagon edges)<br>
+    • Side&nbsp;3: OP common to both triangles<br><br>
+    Therefore △QOP ≅ △TOP by SSS.
+  </div>
+
+  <p><strong>4&nbsp;Look back.</strong>  Congruent triangles give equal matching
+     angles: ∠QPO = ∠TPO and ∠QOP = ∠TOP.</p>
+
+  <h5>(b)&nbsp; Deduce ∠SHO = ∠RHO = 90°</h5>
+
+  <p><strong>1&nbsp;Key observation.</strong>  Quadrilateral <strong>PTSH</strong> is a kite:</p>
+  <ul class="bullet">
+    <li>PS = PT (pentagon sides).</li>
+    <li>HS = HT (radii drop perpendicular to sides in a regular pentagon).</li>
+  </ul>
+
+  <p><strong>2&nbsp;Kite fact.</strong>  In a kite, the line through the equal sides
+     (<em>P–H</em> here) is a line of symmetry; it meets the other diagonal at a right angle.</p>
+
+  <p><strong>3&nbsp;Apply the kite fact.</strong></p>
+  <div style="margin-left:1rem">
+    The diagonals <em>PH</em> and <em>SO</em> cross at <em>H</em>, so  
+    ∠SHO = 90°.
+  </div>
+
+  <p><strong>4&nbsp;Parallel reasoning in quadrilateral PQRH.</strong></p>
+  <ul class="bullet">
+    <li>PQ = PR and HQ = HR (again a kite).</li>
+    <li>The two diagonals meet at 90° ⇒ ∠RHO = 90°.</li>
+  </ul>
+
+  <p><strong>5&nbsp;Conclusion.</strong>  Both angles are right angles, making the earlier
+     “by symmetry” statement precise.</p>
+
+  <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+    <strong>Habits highlighted.</strong><br>
+    • Replace “looks symmetrical” with a <em>congruence proof</em>.<br>
+    • Spot kites in a regular polygon; their diagonals meet at right angles, a fact
+      that often turns hand-waving into a solid argument.
+  </div>
+
+  <p class="follow">Follow-on: <em>Junior&nbsp;Kangaroo 2021 Q20</em></p>
+
+   <!-- 23.2 ------------------------------------------------------------ -->
+  <h4 style="margin-top:1.2rem">23.2&nbsp; Interior-angle formula and quick checks</h4>
+
+  <h5>(a)&nbsp; Derive a formula for an n-gon</h5>
+  <p><strong>Idea.</strong>  From one vertex draw diagonals to every other non-adjacent vertex.  
+     That cuts the n-gon into <span class="U">n − 2</span> triangles.</p>
+
+  <p><em>Total angle sum</em></p>
+  <div style="margin-left:1rem">
+    (n − 2) × 180° &nbsp;=&nbsp; <strong>(n − 2)·180°</strong>
+  </div>
+
+  <h5>(b)&nbsp; Check that a quadrilateral’s angles sum to 360°</h5>
+  <p>Put n = 4.</p>
+  <div style="margin-left:1rem">
+    (4 − 2)·180° = 2·180° = <strong>360°</strong>
+  </div>
+
+  <h5>(c)&nbsp; Check a regular pentagon’s interior angle is 108°</h5>
+  <p>Put n = 5.</p>
+  <div style="margin-left:1rem">
+    (5 − 2)·180° = 3·180° = 540°.<br>
+    Divide by 5 equal angles ⇒ 540° ÷ 5 = <strong>108°</strong>
+  </div>
+
+  <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+    <strong>Habit highlighted.</strong><br>
+    Slicing any n-gon from one vertex into (n − 2) triangles is the quickest
+    way to remember or re-derive angle sums.
+  </div>
+
+</details>
+  
+<!-- ─── Q24 ─────────────────────────────────────────── -->
+<details>
+  <summary>Q24 — Birth-year and digit-sum puzzles</summary>
+
+  <!-- 24.1 -->
+  <h4>24.1&nbsp; Check that option&nbsp;E is correct</h4>
+
+  <p><strong>Understand.</strong> Option E says the target year is 2035.</p>
+  <p><strong>Plan.</strong> Work out Beatrix’s age in 2035 and compare with twice the digit-sum of 2035.</p>
+  <p><strong>Do.</strong> Age = 2035 − 2015 = 20.  
+     Digit-sum(2035) = 2+0+3+5 = 10.  
+     2 × 10 = 20 ✔︎</p>
+  <p><strong>Look&nbsp;back.</strong> A one-line arithmetic check suffices.</p>
+
+  <!-- 24.2 -->
+  <h4>24.2&nbsp; Solve&nbsp;11x + 2y = 21 for non-negative integers</h4>
+
+  <p><strong>Understand.</strong> x steps in 11’s, y steps in 2’s.</p>
+  <p><strong>Plan.</strong> Make a tiny table for x = 0, 1, 2 then stop (21 − 11x turns negative).</p>
+
+  <table>
+    <thead><tr><th>x</th><th>21 − 11x</th><th>Is that 2y?</th></tr></thead>
+    <tbody><tr><td>0</td><td>21</td><td>No (odd)</td></tr>
+           <tr><td><strong>1</strong></td><td><strong>10</strong></td><td><strong>Yes → y = 5</strong></td></tr>
+           <tr><td>2</td><td>−1</td><td>stop</td></tr></tbody>
+  </table>
+
+  <p><strong>Look&nbsp;back.</strong> Only x = 1 works → (x,y) = (1,5).</p>
+
+  <!-- 24.3 -->
+  <h4>24.3&nbsp; Solve&nbsp;8w − z = 19 for digits&nbsp;0-9</h4>
+
+  <p><strong>Understand.</strong> 8w can be 0, 8, 16, 24, … 72.</p>
+  <p><strong>Plan.</strong> Check which of those ends in 4 (since 4 − 5 = 19 ends in 9).</p>
+  <p><strong>Do.</strong> 24 is the only multiple of 8 ≤ 72 ending in 4 → w = 3.  
+     Then z = 8·3 − 19 = 5.</p>
+  <p><strong>Look&nbsp;back.</strong> Only (w,z) = (3,5) fits 0-9.</p>
+
+  <!-- 24.4 -->
+  <h4>24.4&nbsp; Find Pat’s birth-year</h4>
+
+  <p><strong>Understand.</strong> Year = 19ab; age in 2023 equals 3 × digit-sum.</p>
+  <p><strong>Plan.</strong> Write one equation using 10a + b.</p>
+
+  <div style="margin-left:1rem">
+    <em>Do.</em> Age = 123 − 10a − b, digit-sum = 10 + a + b<br>
+    123 − 10a − b = 3(10 + a + b)<br>
+    ⇒ 13a + 4b = 93 → try a = 5 gives b = 7.
+  </div>
+
+  <p><strong>Look&nbsp;back.</strong> Pat was born <strong>1957</strong>; substitute to verify.</p>
+
+  <!-- 24.5 -->
+  <h4>24.5&nbsp; King Mindaugas’s coronation year</h4>
+
+  <p><strong>Understand.</strong> Year = 12ab; “years since” = 823 − 10a − b.</p>
+  <p><strong>Plan.</strong> One equation with digit-sum 3 + a + b.</p>
+
+  <div style="margin-left:1rem">
+    <em>Do.</em> 823 − 10a − b = 70(3 + a + b)<br>
+    ⇒ 80a + 71b = 613 → a = 5 gives b = 3.
+  </div>
+
+  <p><strong>Look&nbsp;back.</strong> Year = <strong>1253</strong>; quick check:  
+     years since = 770, digit-sum = 11, 70 × 11 = 770 ✔︎</p>
+
+  <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+    <strong>Digits → mini-equations habit.</strong>  
+    Turning “ab” into 10a + b keeps the search range small  
+    (0-9 trials for a, and usually only one candidate works).
+  </div>
+</details>
 
   <!-- ─── Q25 ─────────────────────────────────────────── -->
-  <details>
-    <summary>Q25 — Granny’s three gifts (work backwards)</summary>
+<details>
+  <summary>Q25 — Granny’s gifts (spoons → cats → teapots)</summary>
 
-    <h4>25.1 — Algebra step check</h4>
-    <p>Substitute x ↦ (2⁄3)x − 8 three times ⇒ (8⁄27)x − 152⁄9 as stated.</p>
+  <!-- 25.1 -->
+  <h4>25.1&nbsp; Check the algebra line in Method&nbsp;1</h4>
 
-    <h4>25.2 — China cats (k = 27, p = 4)</h4>
-    <table>
-      <thead><tr><th>Stage</th><th>Cats left</th></tr></thead>
-      <tbody>
-        <tr><td>After neighbour</td><td>0</td></tr>
-        <tr><td>Before neighbour</td><td>4⁄3·27 = 36</td></tr>
-        <tr><td>Before son</td><td>4⁄3·(36+27)=84</td></tr>
-        <tr><td>Before daughter</td><td>4⁄3·(84+27)=148</td></tr>
-      </tbody>
-    </table>
-    <p>Granny began with <strong>148 cats</strong>.</p>
+  <p><strong>Understand.</strong>  
+     Method 1 repeatedly keeps <span class="U">⅔</span> of what is left, then subtracts 8.  
+     After three rounds the booklet states</p>
+  <div style="margin-left:1.2rem">
+    \[
+      \frac23\!\Bigl(\frac23\!\bigl(\tfrac23 x - 8 \bigr)\;-\;8 \Bigr)\;-\;8
+      \;=\;
+      \frac{8}{27}\,x\;-\;\frac{152}{9}.
+    \]
+  </div>
 
-    <h4>25.3 — General formula (k, p)</h4>
-    <p>Let a=(p−1)/p. After three steps: a³x − k(a² + a + 1)=0 ⇒ <br>
-      $$x = \frac{k p (3p^{2}-3p+1)}{(p-1)^{3}}.$$</p>
+  <p><strong>Plan.</strong>  
+     Expand step-by-step and simplify.</p>
 
-    <p class="follow">Follow-on: <em>Junior Kangaroo 2020 Q24</em> – pirates repeatedly give ¾ of their treasure; solved by the same backward-multiply idea.</p>
-    <p><strong>Habit – “Work from zero back to the start.”</strong></p>
-  </details>
+  <p><strong>Do.</strong></p>
+  <ol class="bullet">
+    <li>First step \(\displaystyle \tfrac23 x - 8\).</li>
+    <li>Second  \(\displaystyle \tfrac23\bigl(\tfrac23 x - 8\bigr) - 8  
+        = \tfrac49 x - \tfrac{16}{3} - 8  
+        = \tfrac49 x - \tfrac{40}{3}.\)</li>
+    <li>Third   \(\displaystyle \tfrac23\Bigl(\tfrac49 x - \tfrac{40}{3}\Bigr) - 8  
+        = \tfrac{8}{27}x - \tfrac{80}{9} - 8  
+        = \tfrac{8}{27}x - \tfrac{152}{9}.\)</li>
+  </ol>
 
-  <hr>
-  <p class="centre"><strong>One-minute habit summary (2023)</strong></p>
+  <p><strong>Look&nbsp;back.</strong>  
+     The expanded right-hand side matches the booklet exactly, so the printed equation is correct.</p>
+
+  <!-- 25.2 -->
+  <h4>25.2&nbsp; How many china cats did Granny start with?</h4>
+
+  <p><em>Rule:</em> “Give <strong>27 more than a quarter</strong> of what remains” three times leaves nothing.</p>
+
+  <p><strong>Understand.</strong>  
+     Working <em>backwards</em> is easier: start from 0 cats after the neighbour’s share.</p>
+
+  <p><strong>Plan.</strong>  
+     Each reverse step multiplies by \(\tfrac{4}{3}\) (the inverse of ‘keep three-quarters’) and then adds 27.</p>
+
+  <p><strong>Do.</strong></p>
   <table>
-    <tr><th>Habit</th><th>Where it surfaced</th></tr>
-    <tr><td>Ratio ladder (bottom-up)</td><td>Q21</td></tr>
-    <tr><td>Sketch &amp; label first</td><td>Q22</td></tr>
-    <tr><td>Digits → mini-equations</td><td>Q24</td></tr>
-    <tr><td>Backwards planning</td><td>Q25</td></tr>
-    <tr><td>Replace vague symmetry with congruence</td><td>Q23</td></tr>
+    <thead><tr><th>Stage (backwards)</th><th>Cats left</th></tr></thead>
+    <tbody>
+      <tr><td>After neighbour</td><td>0</td></tr>
+      <tr><td>Before neighbour</td><td>\(\tfrac43(0) + 27 = 27\)</td></tr>
+      <tr><td>Before son</td><td>\(\tfrac43(27) + 27 = 63\)</td></tr>
+      <tr><td>Before daughter</td><td>\(\tfrac43(63) + 27 = 148\)</td></tr>
+    </tbody>
   </table>
-</section>
 
+  <p><strong>Answer.</strong> Granny began with <span class="U">148</span> china cats.</p>
+
+  <p><strong>Look&nbsp;back.</strong>  
+     A quick forward run (take 27 then ¼, three times) returns to 0 — check passed.</p>
+
+  <!-- 25.3 -->
+  <h4>25.3&nbsp; General teapot formula</h4>
+
+  <!-- (a) -->
+  <h5>(a)&nbsp; Derive x in terms of k and p</h5>
+
+  <p><strong>Understand.</strong>  
+     Now she gives "<span class="U">k more than \(\dfrac1p\)</span> of what remains" three times.</p>
+
+  <p><strong>Plan.</strong>  
+     Forward step multiplies by \(a=\tfrac{p-1}{p}\) and subtracts k.  
+     Reverse step multiplies by \(\tfrac{p}{p-1}\) and adds k.</p>
+
+  <p><strong>Do.</strong></p>
+  <ul class="bullet">
+    <li>Let \(a=\tfrac{p-1}{p}\). Forward formula: new total = \(a\,x - k\).</li>
+    <li>Three forward steps give \(a^{3}x - k(a^{2}+a+1)=0\).</li>
+    <li>Therefore  
+      \[
+        \boxed{\,x  
+          = k\,\frac{a^{2}+a+1}{a^{3}}  
+          = k\,p\,\frac{3p^{2}-3p+1}{(p-1)^{3}}\,}.
+      \]</li>
+  </ul>
+
+  <p><strong>Look&nbsp;back.</strong>  
+     Dimensions check: if k = 0 (she just gives perfect fractions) the formula
+     reduces to \(x = p^{3}/(p-1)^{3}\), as expected from classic “p−1 over p” problems.</p>
+
+  <!-- (b) -->
+  <h5>(b)&nbsp; Substitute k = 8, p = 3 (spoons) → 57</h5>
+
+  <div style="margin-left:1.2rem">
+    \(a = \tfrac23;\; a^{2}+a+1 = \tfrac{13}{9};\; a^{3} = \tfrac{8}{27}\)<br>
+    \(x = 8·3·\dfrac{13}{9} ÷ \dfrac{8}{27} = 57.\) ✔︎
+  </div>
+
+  <!-- (c) -->
+  <h5>(c)&nbsp; Substitute k = 27, p = 4 (cats) → 148</h5>
+
+  <div style="margin-left:1.2rem">
+    \(a = \tfrac34;\; a^{2}+a+1 = \tfrac{37}{16};\; a^{3} = \tfrac{27}{64}\)<br>
+    \(x = 27·4·\dfrac{37}{16} ÷ \dfrac{27}{64} = 148.\) ✔︎
+  </div>
+
+  <p><strong>Look&nbsp;back.</strong>  
+     Both substitutions agree with earlier answers, confirming the formula.</p>
+
+  <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+    <strong>Habits from Q25.</strong><br>
+    • For multi-stage “give away” puzzles, work <em>backwards</em> with the inverse fraction.<br>
+    • Write the forward step once, then cube (or square) it instead of
+      rewriting three separate stages.<br>
+    • Always verify a general formula by plugging in the booklet’s special cases.
+  </div>
+
+  <p class="follow">Follow-on: <em>Intermediate&nbsp;Cayley Olympiad&nbsp;2020 Q4</em></p>
+</details>
+
+</section>
 
 <!-- █████ 2022 █████ -->
 <section class="invest-year" id="y2022">
-  <h2 class="centre rainbow">JMC 2022 Investigations</h2>
+  <h2 class="centre rainbow">JMC&nbsp;2022 Investigations</h2>
+
+  <p class="centre" style="margin-top:-0.5rem">
+    🔗 <a href="https://ukmt.org.uk/wp-content/uploads/2023/08/JMC2022__Extended_solutions__web_version__web_version_.pdf" target="_blank">
+      Official UKMT Extended Solutions (PDF)
+    </a>
+  </p>
 
   <!-- ─── Q21 ─────────────────────────────────────────── -->
   <details>
-    <summary>Q21 — One swap between two lists of numbers</summary>
+    <summary>Q21 — Swapping numbers between two lists</summary>
 
-    <!-- 21 (a) -->
-    <h4>21&nbsp;(a) First new pair of lists</h4>
-    <pre>S : 3  5  8 11 13 14  (sum 54)
-T : 2  5  6 10 12 13  (sum 48)</pre>
+    <h4>21.1&nbsp; How many swaps make the two sums equal?</h4>
 
-    <ol>
-      <li><strong>Understand.</strong> Swap one S-number <em>s</em> with one T-number <em>t</em> so the new totals match.</li>
-      <li><strong>Plan – parity test first.</strong> 54 + 48 = 102 (even) ⇒ equal split possible, so continue.</li>
-      <li><strong>Do it.</strong><br>
-<pre>new S = 54 − s + t
-new T = 48 − t + s
-54 − s + t = 48 − t + s
-6 = 2(s−t) ⇒ s−t = 3</pre>
-        Scan lists → no pair differs by 3 ⇒ <em>no swap works</em>.</li>
-      <li><strong>Look back.</strong> Parity test + “equation for the change”.</li>
-    </ol>
+    <!-- (a) ----------------------------------------------------------- -->
+    <h5>(a)&nbsp; Lists<br>
+        S : 3  5  8  11  13  14 (sum 54)<br>
+        T : 2  5  6  10  12  13 (sum 48)</h5>
 
-    <!-- 21 (b) -->
-    <h4>21&nbsp;(b) Second pair of lists</h4>
-    <pre>S sum = 65 T sum = 66 → Grand total = 131 (odd)</pre>
-    <p><em>Odd total cannot split evenly</em> ⇒ stop instantly.</p>
+    <p><strong>Understand.</strong>  Swap one number s ∈ S with one number t ∈ T so the new sums match.</p>
 
-    <!-- 21 (c) -->
-    <h4>21&nbsp;(c) Third pair with a twist (new S = 2 × new T)</h4>
-    <pre>S : 8 9 10 13 14 15  (sum 69)
-T : 1 2 3 4 5 6      (sum 21)</pre>
+    <p><strong>Plan.</strong>  Write a single “new S = new T” equation and solve for (s − t).</p>
 
-    <p>Equation: 69 − s + t = 2(21 − t + s) ⇒ 9 = s − t.</p>
+    <p><strong>Do.</strong></p>
+    <div style="margin-left:1rem">
+      New&nbsp;S = 54 − s + t<br>
+      New&nbsp;T = 48 − t + s<br>
+      Set equal → 54 − s + t = 48 − t + s ⇒ 6 = 2(s − t) ⇒ <strong>s − t = 3</strong>.
+    </div>
+
     <table>
-      <thead><tr><th><em>t</em> in T</th><th><em>s</em>=t+9 must be in S</th><th>Works?</th></tr></thead>
+      <thead><tr><th>s&nbsp;∈ S</th><th>t = s − 3</th><th>Is t in T?</th></tr></thead>
       <tbody>
-        <tr><td>1</td><td>10</td><td>✔︎</td></tr>
-        <tr><td>2</td><td>11</td><td>✗</td></tr>
-        <tr><td>3</td><td>12</td><td>✗</td></tr>
-        <tr><td>4</td><td>13</td><td>✔︎</td></tr>
-        <tr><td>5</td><td>14</td><td>✔︎</td></tr>
-        <tr><td>6</td><td>15</td><td>✔︎</td></tr>
+        <tr><td>5</td><td>2</td><td>✓</td></tr>
+        <tr><td>8</td><td>5</td><td>✓</td></tr>
+        <tr><td>11</td><td>8</td><td>✗</td></tr>
+        <tr><td>13</td><td>10</td><td>✓</td></tr>
+        <tr><td>14</td><td>11</td><td>✗</td></tr>
       </tbody>
     </table>
-    <p>Valid swaps: (10,1), (13,4), (14,5), (15,6).</p>
 
-    <p class="follow">Follow-on: <em>JMO 2022 Q5</em> — harder swap-to-balance problem.</p>
-    <p><strong>Habit – “Equation for the change” + parity first.</strong></p>
+    <p><strong>Answer.</strong> 3 valid swaps: (5,2), (8,5), (13,10).</p>
+
+    <p><strong>Look&nbsp;back.</strong>  
+       Parity check first (54 + 48 even) told us “equal split is possible”; the one-line equation then narrowed the search to a simple difference.</p>
+
+    <!-- (b) ----------------------------------------------------------- -->
+    <h5 style="margin-top:1.2rem">(b)&nbsp; Lists<br>
+        S : 4  7  9  13  15  17 (sum 65)<br>
+        T : 2  5  8  12  18  21 (sum 66)</h5>
+
+    <p><strong>Understand.</strong>  S is already <em>one</em> less than T.</p>
+
+    <p><strong>Plan.</strong>  Same equation: 65 − s + t = 66 − t + s ⇒ −1 = 2(s − t).</p>
+
+    <p><strong>Do.</strong>  Right side is always an even integer, but left side is −1 (odd) ⇒ impossible.</p>
+
+    <p><strong>Look&nbsp;back.</strong>  
+       Parity check shows no swap exists, saving us from any further trial.</p>
+
+    <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+      <strong>Habit ⚔️</strong>&nbsp; “Equation-for-the-change”.  
+      Write “new = old ± swap”, solve one tidy line, and parity often decides the count instantly.
+    </div>
+
+    <p class="follow">Follow-on: <em>Junior Kangaroo 2019 Q11</em></p>
   </details>
 
   <!-- ─── Q22 ─────────────────────────────────────────── -->
   <details>
-    <summary>Q22 — Snipping a corner off a cube &amp; Euler’s formula</summary>
+    <summary>Q22 — Euler’s V − E + F = 2</summary>
 
-    <ol>
-      <li><strong>Understand.</strong> Start cube: V = 8, E = 12, F = 6.</li>
-      <li><strong>Plan.</strong> Make a clear before/after table.</li>
-    </ol>
+    <!-- (a) ----------------------------------------------------------- -->
+    <h4>22.1&nbsp;(a)&nbsp; Cutting one corner off a cube</h4>
 
-    <table>
-      <thead><tr><th>Item</th><th>Change</th><th>Why</th></tr></thead>
-      <tbody>
-        <tr><td>Vertices</td><td>−1</td><td>Corner U removed</td></tr>
-        <tr><td>Edges</td><td>−3</td><td>UA, UB, UC removed</td></tr>
-        <tr><td></td><td>+3</td><td>New edges TU, UQ, UV</td></tr>
-        <tr><td>Faces</td><td>−3</td><td>Three squares lose a corner</td></tr>
-        <tr><td></td><td>+1</td><td>New triangle face</td></tr>
-        <tr><td></td><td>+3</td><td>Each cut square splits into two</td></tr>
-      </tbody>
-    </table>
+    <p><strong>Understand.</strong>  
+       Remove a small triangular pyramid (a corner vertex plus its three incident edges and faces) from a cube.  
+       Count the new vertices V, edges E, faces F.</p>
 
-    <p>Totals after cut: V = 7, E = 12, F = 7 → 7 − 12 + 7 = 2 ✓</p>
+    <p><strong>Plan.</strong>  
+       Use a before/after table so nothing is missed.</p>
 
-    <p class="follow">Follow-on: <em>JMO 2022 Q8</em> — verify Euler on another polyhedral cut.</p>
-    <p><strong>Habit – “Account for every face, edge, vertex.”</strong></p>
+    <p><strong>Do.</strong></p>
+
+    | Item | Cube | Change | After |
+    |------|------|--------|-------|
+    | Vertices | 8 | −1 (corner gone) | **7** |
+    | Edges | 12 | −3 (corner edges) +3 (new triangle edges) | **12** |
+    | Faces | 6 | −3 (corner faces) +1 (triangle) +3 (each cut square splits) | **7** |
+
+    <div style="margin-top:.6rem">
+      \(V − E + F = 7 − 12 + 7 = 2\) ✔︎
+    </div>
+
+    <p><strong>Look&nbsp;back.</strong>  
+       The only easy slip is forgetting each cut square now counts as <em>two</em> faces.</p>
+
+    <!-- (b) ----------------------------------------------------------- -->
+    <h4>22.1&nbsp;(b)&nbsp; Euler’s formula for the other Platonic solids</h4>
+
+    <p><strong>Understand.</strong>  
+       List V, E, F from standard tables.</p>
+
+    <p><strong>Plan.</strong>  
+       Compute \(V − E + F\) for each.</p>
+
+    | Solid | V | E | F | V − E + F |
+    |-------|---|---|---|------------|
+    | Tetrahedron | 4 | 6 | 4 | 2 |
+    | Octahedron | 6 | 12 | 8 | 2 |
+    | Dodecahedron | 20 | 30 | 12 | 2 |
+    | Icosahedron | 12 | 30 | 20 | 2 |
+
+    <p><strong>Look&nbsp;back.</strong>  
+       All four give 2, confirming Euler’s rule.</p>
+
+    <!-- (c) ----------------------------------------------------------- -->
+    <h4>22.1&nbsp;(c)&nbsp; Try two other polyhedra of your choice</h4>
+
+    <p><strong>Understand.</strong>  
+       Any convex polyhedron should satisfy \(V − E + F = 2\).</p>
+
+    <p><strong>Plan &amp; Do.</strong></p>
+
+    | Example polyhedron | V | E | F | V − E + F |
+    |--------------------|---|---|---|------------|
+    | Square-based pyramid | 5 | 8 | 5 | 2 |
+    | Triangular prism | 6 | 9 | 5 | 2 |
+
+    <p><strong>Look&nbsp;back.</strong>  
+       Pupils can build their own cardboard models and tick off the counts; the formula still holds.</p>
+
+    <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+      <strong>Habit ⚔️</strong>  
+      When altering a solid, track each <em>category</em> (V, E, F) before/after.  
+      A quick Euler check (should equal 2) is an excellent error-catcher.
+    </div>
+
+    <p class="follow">Follow-on: <em>Junior&nbsp;Kangaroo&nbsp;2020 Q19</em></p>
   </details>
-
+  
   <!-- ─── Q23 ─────────────────────────────────────────── -->
   <details>
-    <summary>Q23 — Two-stage percentage changes on a train fare</summary>
+    <summary>Q23 — Train-ticket price changes</summary>
 
-    <h4>23&nbsp;(a) Ends £2.38 cheaper than £23.80 after 20 % rise + sale</h4>
+    <!-- 23.1 ---------------------------------------------------------- -->
+    <h4>23.1&nbsp; A 20 % rise followed by a discount leaves the ticket £2.38 cheaper than before</h4>
+
+    <p><strong>Understand.</strong><br>
+       • The original fare is £23.80.<br>
+       • First it rises by 20 %.<br>
+       • Then a special-offer discount pulls the price down so that the final cost is £2.38 below the <em>original</em> £23.80.<br>
+       • We must find that discount as a percentage of the price <em>after</em> the rise.</p>
+
+    <p><strong>Plan.</strong><br>
+       1&nbsp; Compute the exact price after the 20 % rise.<br>
+       2&nbsp; Compute the exact final price (original – £2.38).<br>
+       3&nbsp; Turn “new ÷ old” into a multiplier and then into a percentage cut.</p>
+
+    <p><strong>Do.</strong></p>
     <ol>
-      <li><strong>Understand.</strong> Final £21.42.</li>
-      <li><strong>Plan.</strong> Work <em>backwards</em>: divide by 1.2.</li>
-      <li><strong>Do it.</strong> £21.42 ÷ 1.2 = £17.85 → drop £5.95 ⇒ 25 % off.</li>
-      <li><strong>Look back.</strong> <em>Undo</em> a percentage by dividing.</li>
+      <li><em>After the 20 % rise.</em>  
+          A 20 % increase means multiply by 1.20:<br>
+          £23.80 × 1.20 = <strong>£28.56</strong>.</li>
+
+      <li><em>After the discount.</em>  
+          The question says the final ticket is £2.38 cheaper than the original, so<br>
+          £23.80 – £2.38 = <strong>£21.42</strong>.</li>
+
+      <li><em>Find the discount multiplier.</em><br>
+          multiplier = (final price) ÷ (price after rise)  
+          &nbsp;&nbsp;= 21.42 ÷ 28.56 ≈ 0.75.</li>
+
+      <li><em>Convert to a percentage cut.</em><br>
+          A multiplier of 0.75 means the fare is 75 % of what it was, so the cut is 25 %. </li>
     </ol>
 
-    <h4>23&nbsp;(b) After same 20 % rise, sale leaves fare 5 % above original</h4>
-    <p>Chain multipliers: 1×1.2×<em>k</em> = 1.05 ⇒ <em>k</em>=0.875 ⇒ 12½ % discount.</p>
+    <p><strong>Look back.</strong><br>
+       • 25 % of £28.56 is exactly £7.14, and £28.56 – £7.14 = £21.42, so the arithmetic
+       checks out.<br>
+       • The cut is larger than the earlier rise (25 % vs 20 %), which makes sense because the final fare ends up below the starting £23.80.</p>
 
-    <p class="follow">Follow-on: <em>JMO 2020 Q2</em> — successive % changes to meet a target.</p>
-    <p><strong>Habit – “Chain multipliers, then compare.”</strong></p>
+    <!-- 23.2 ---------------------------------------------------------- -->
+    <h4 style="margin-top:1.6rem">23.2&nbsp; After a 20 % rise, a protest brings the price down so it is only 5 % above the original</h4>
+
+    <p><strong>Understand.</strong><br>
+       • Let the original price be £<em>p</em> (we do not need its actual number).<br>
+       • First rise: multiply by 1.20.<br>
+       • Second change (the protest cut): ends at 5 % above £<em>p</em>, i.e. at 1.05 × <em>p</em>.<br>
+       • We need the <em>percentage reduction</em> of that second change.</p>
+
+    <p><strong>Plan.</strong><br>
+       Treat the unknown percentage reduction as a multiplier <em>k</em>.  
+       Build one chain equation and solve for <em>k</em>, then translate <em>k</em> into a percentage cut.</p>
+
+    <p><strong>Do.</strong></p>
+    <div style="margin-left:1.2rem">
+      After rise: 1.20 <em>p</em><br>
+      After cut: 1.20 <em>p</em> × <em>k</em> = 1.05 <em>p</em><br><br>
+      Solve for <em>k</em>: <em>k</em> = 1.05⁄1.20 = 0.875.<br><br>
+      Convert: 0.875 = 87.5 % of the pre-cut price → the cut is 12.5 %.  
+    </div>
+
+    <p><strong>Look back.</strong><br>
+       • 12½ % of £28.56 is £3.57, and £28.56 – £3.57 ≈ £24.99, which is indeed 5 % above £23.80.<br>
+       • Checking with the abstract symbols first kept the algebra tiny, then one numerical check confirmed the sanity.</p>
+
+    <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+      <strong>Habit ⚔️ Chain-multipliers.</strong><br>
+      • Always line up each percentage change as a multiplier (1 + rise or 1 – cut).<br>
+      • Unknown cuts become a single letter multiplier; solving one equation beats juggling two percentage phrases.
+    </div>
+
+    <p class="follow">Follow-on: <em>Junior Kangaroo 2020 Q15</em></p>
   </details>
 
   <!-- ─── Q24 ─────────────────────────────────────────── -->
   <details>
-    <summary>Q24 — Four colours in linked ratios</summary>
+    <summary>Q24 — Fleur’s Flower-shop ratios</summary>
 
-    <p>Chain 1:2, 3:4, 5:6 → scale by 15 ⇒ <strong>15 : 30 : 40 : 48</strong>, total 133.<br>
-       Shop can stock only 0 or 133 flowers (limit 150).</p>
+    <h4>24.1&nbsp; How many pot plants are in the shop?</h4>
 
-    <p class="follow">Follow-on: <em>Junior Kangaroo 2021 Q14</em> — combine two 3-way ratios into one.</p>
-    <p><strong>Habit – “Start with one unit → multiply → clear fractions.”</strong></p>
+    <p><strong>Understand.</strong><br>
+       Four plant types and three linked ratios:</p>
+    <ul class="bullet">
+      <li>Azaleas : Begonias = 1 : 3</li>
+      <li>Begonias : Cyclamen = 2 : 5</li>
+      <li>Cyclamen : Dracaenas = 4 : 7</li>
+    </ul>
+    <p>We need the total number of plants, knowing it is **below 300**.</p>
+
+    <p><strong>Plan.</strong><br>
+       Build a <em>ratio ladder</em> starting from Azaleas (A):  
+       climb up, clearing any fractions, until all four numbers are integers.  
+       Then scale that whole set by a positive integer k and pick the largest k with a total &lt; 300.</p>
+
+    <p><strong>Do.</strong></p>
+    <ol>
+      <li><em>First rung.</em>  
+          A : B = 1 : 3 ⇒ B = 3A.</li>
+      <li><em>Second rung.</em>  
+          B : C = 2 : 5 ⇒ C = (5/2) B = (5/2)·3A = 15/2 A.  
+          To keep C an integer, **A must be even**.</li>
+      <li><em>Third rung.</em>  
+          C : D = 4 : 7 ⇒ D = (7/4) C = (7/4)·15/2 A = 105/8 A.  
+          For D to be an integer, **A must be a multiple of 8**.</li>
+      <li><em>Choose the smallest such A.</em>  
+          Let A = 8.<br>
+          ⇒ B = 24, C = 60, D = 105.</li>
+      <li><em>Total for one full ratio unit.</em>  
+          8 + 24 + 60 + 105 = **197**.</li>
+      <li><em>Scale by k.</em>  
+          2 × 197 = 394 (> 300) so k = 1 is the only option.</li>
+    </ol>
+
+    <p><strong>Answer.</strong>  
+       Fleur has <span class="U">197</span> pot plants.</p>
+
+    <p><strong>Look&nbsp;back.</strong><br>
+       • 197 &lt; 300 satisfies the “fewer than 300” condition.<br>
+       • Any smaller k would break an earlier rung; any larger k overshoots 300.</p>
+
+    <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+      <strong>Habit ⚔️ Ratio ladder.</strong>  
+      Start at the smallest unknown, multiply or divide one step at a time, and note when the next rung forces the first number to be a multiple of 2, 4, 8, …  
+      A single scale factor k then sweeps all larger totals at once.
+    </div>
+
+    <p class="follow">Follow-on: <em>Junior&nbsp;Kangaroo 2018 Q23</em></p>
   </details>
-
+  
   <!-- ─── Q25 ─────────────────────────────────────────── -->
   <details>
-    <summary>Q25 — Five-row number pyramid &amp; Pascal’s triangle</summary>
+    <summary>Q25 — Five-row and six-row number pyramids</summary>
 
-    <h4>25&nbsp;(a) A complete positive example</h4>
-    <pre>v = 1   w = 2   x = 4   y = 3   z = 7</pre>
-    <p>All sums check; pyramid stays positive.</p>
+    <!-- 25.1 ---------------------------------------------------------- -->
+    <h4>25.1&nbsp; Five-row pyramid, bottom-row sum 17</h4>
 
-    <h4>25&nbsp;(b) How many bottom rows work?</h4>
-    <p>Use v = 7−w, y = 4−w+v, z = 17−(v+w+4+y).  
-       Valid w = 1 … 5 ⇒ six bottom-row orderings.</p>
+    <p><strong>Understand.</strong><br>
+       Bottom row is <em>v w x y z</em>, all different positive integers, total 17.  
+       The middle three equations given in the main solution are:</p>
+    <div style="margin-left:1.2rem">
+      w + x = 6   x + y = 7   v + w + x + y + z = 17
+    </div>
 
-    <h4>25&nbsp;(c) Six-row version → Pascal coefficients</h4>
-    <p>Top coefficients: 1 4 6 4 1 (5th row of Pascal).  
-       Any pyramid of pair-adds hides binomial numbers.</p>
+    <p><strong>Plan.</strong><br>
+       Use the three equations to pin down each letter, then count the
+       possible orderings of the five numbers left – right.</p>
 
-    <p class="follow">Follow-on: <em>Junior Kangaroo 2020 Q25</em> — triangular array whose entries are binomial coefficients.</p>
-    <p><strong>Habit – “Pascal numbers lurk in add-up pyramids.”</strong></p>
+    <p><strong>Do.</strong></p>
+    <ol>
+      <li>Subtract the first two equations → y − w = 1.</li>
+      <li>Add the first two → 2x + w + y = 13.<br>
+          But y = w + 1, so 2x + 2w + 1 = 13 ⇒ 2x + 2w = 12 ⇒ x + w = 6 (already known).</li>
+      <li>This forces <strong>x = 4</strong>, <strong>w = 2</strong>, <strong>y = 3</strong>.</li>
+      <li>Sum so far 2 + 4 + 3 = 9; hence v + z = 17 − 9 = 8.</li>
+      <li>v and z must be positive, distinct, and different from 2, 3, 4.<br>
+          The only unordered pair is {1, 7}.  
+          Two orderings give (v,z) = (1,7) or (7,1).</li>
+      <li>The bottom row order v-w-x-y-z contains five slots.
+          x, w, y are locked to the middle three, but
+          v and z can go left or right → <strong>6 distinct arrangements</strong> in total.</li>
+    </ol>
+
+    <p><strong>Look&nbsp;back.</strong>  
+       A forward rebuild of the pyramid from each of the six admissible rows gives
+       positive integers throughout, confirming our count.</p>
+
+    <!-- 25.2 ---------------------------------------------------------- -->
+    <h4 style="margin-top:1.6rem">25.2&nbsp; Six-row pyramid — expression for the top cell</h4>
+
+    <p><strong>Understand.</strong><br>
+       Each brick is the sum of the two bricks below.  
+       With six bottom numbers <em>u v w x y z</em>, the top coefficient pattern is
+       the fifth row of Pascal’s triangle (because we add up five times).</p>
+
+    <p><strong>Plan.</strong>  
+       List the binomial coefficients for row 5: 1  5  10  10  5  1.</p>
+
+    <p><strong>Do.</strong><br>
+       \[
+         \text{Top} = u + 5v + 10w + 10x + 5y + z.
+       \]</p>
+
+    <p><em>Numerical check.</em>  Put<br>
+       u = 25, v = 40, w = 72, x = 84, y = 42, z = 27.</p>
+    <div style="margin-left:1.2rem">
+      25 + 5·40 + 10·72 + 10·84 + 5·42 + 27 = <strong>2022</strong>.
+    </div>
+
+    <p><strong>Look&nbsp;back.</strong>  
+       Coefficients sum to 32 (= 2⁵), matching the fact each original number is used
+       in 32 different paths to the top brick.</p>
+
+    <!-- 25.3 ---------------------------------------------------------- -->
+    <h4 style="margin-top:1.6rem">25.3&nbsp; What do you notice about the coefficients?</h4>
+
+    <p><strong>Understand.</strong>  
+       The coefficients in the top four rows of any “add-the-two-below” pyramid are:</p>
+
+    <table>
+      <tbody>
+        <tr><td class="centre">Row from bottom</td><td class="centre">Coefficients</td></tr>
+        <tr><td class="centre">2&nbsp;(five-row top)</td><td class="centre">1 4 6 4 1</td></tr>
+        <tr><td class="centre">3</td><td class="centre">1 5 10 10 5 1</td></tr>
+        <tr><td class="centre">4</td><td class="centre">1 6 15 20 15 6 1</td></tr>
+        <tr><td class="centre">5 (etc.)</td><td class="centre">…</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Plan &amp; Do.</strong>  
+       Recognise these rows as successive lines of <em>Pascal’s triangle</em>.</p>
+
+    <p><strong>Look&nbsp;back.</strong>  
+       Every time we move up a layer, each new coefficient is the sum of the two
+       just below it—exactly how Pascal’s triangle is built.  
+       That explains why the binomial pattern appears automatically in any
+       addition pyramid.</p>
+
+    <div class="follow" style="background:var(--yellow);padding:.6rem .9rem;border-radius:8px">
+      <strong>Habit ⚔️</strong>&nbsp; When a pyramid rule is “add the two below,”
+      expect Pascal numbers; use them to write the top in closed form and
+      to spot hidden symmetries.
+    </div>
+
+    <p class="follow">Follow-on: <em>Intermediate&nbsp;Cayley Olympiad&nbsp;2021 Q3</em></p>
   </details>
 
-  <hr>
-  <p class="centre"><strong>Final habit checklist (2022)</strong></p>
-  <table>
-    <tr><th>Habit</th><th>Appeared in</th></tr>
-    <tr><td>Equation for the change</td><td>Q21</td></tr>
-    <tr><td>Parity first</td><td>Q21</td></tr>
-    <tr><td>Count every face/edge/vertex</td><td>Q22</td></tr>
-    <tr><td>Undo percentages by dividing</td><td>Q23</td></tr>
-    <tr><td>Unit-ratio ladder</td><td>Q24</td></tr>
-    <tr><td>Pascal numbers in pyramids</td><td>Q25</td></tr>
-  </table>
+  
 </section>
+
 
 <!-- █████ 2021 █████ -->
 <section class="invest-year" id="y2021">
