@@ -27,28 +27,39 @@
 <main>
   <h2 class="centre rainbow">Today’s Drops</h2>
 
-  <!-- JS will fill this box with the daily quote / problem / fact / meme -->
-  <div id="daily-box"></div>
+  <div id="daily-box">
+    <div id="daily-fun"></div>
+    <hr style="margin:1.5rem 0">
+    <div id="daily-puzzle"></div>
+  </div>
 </main>
 
-<!-- ── Date‐based daily picker script ── -->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    fetch("dailys.json")
-      .then(res => res.json())
-      .then(items => {
-        // One new item per calendar day:
-        const daysSinceEpoch = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
-        const index = daysSinceEpoch % items.length;
-        document.getElementById("daily-box").innerHTML = items[index];
-      })
-      .catch(err => {
-        console.error("Could not load dailyContent", err);
-        document.getElementById("daily-box").textContent =
-          "Sorry, today's content is unavailable.";
-      });
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("dailys.json")
+    .then(res => res.json())
+    .then(data => {
+      const { fun, puzzles } = data;
+
+      // one index per day:
+      const day = Math.floor(Date.now() / (1000*60*60*24));
+
+      // pick from each list
+      const funItem    = fun[   day % fun.length];
+      const puzzleItem = puzzles[day % puzzles.length];
+
+      // inject into the two boxes
+      document.getElementById("daily-fun").innerHTML    = funItem;
+      document.getElementById("daily-puzzle").innerHTML = puzzleItem;
+    })
+    .catch(err => {
+      console.error("Loading daily content failed", err);
+      document.getElementById("daily-box").textContent =
+        "Sorry, today’s content is unavailable.";
+    });
+});
 </script>
+
 
   <!-- ░░ FOOTER ░░ -->
   <footer>
