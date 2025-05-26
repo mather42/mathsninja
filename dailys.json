@@ -1,5 +1,13 @@
-[
-  "<strong>Quote:</strong> “Mathematics is the poetry of logical ideas.” – Einstein",
-  "<strong>Problem:</strong> How many multiples of 9 are there between 100 and 500?",
-  "<strong>Fun fact:</strong> A 4-dimensional hypercube is called a <em>tesseract</em>."
-]
+{
+  "fun": [
+    "<strong>Quote:</strong> “Mathematics is the poetry of logical ideas.” – Einstein",
+    "<strong>Fun fact:</strong> A 4-dimensional hypercube is called a <em>tesseract</em>",
+    "<strong>Pun:</strong> Why did the student wear glasses in math class? Because it improves di-vision!"
+  ],
+  "puzzles": [
+    "<strong>Problem:</strong> How many multiples of 9 are there between 100 and 500?",
+    "<strong>Problem:</strong> In a triangular orchard, each side has 21 trees spaced equally—how many trees along the perimeter (without double-counting corners)?",
+    "<strong>Challenge:</strong> I’m thinking of a number. Multiply by 3, add 12, divide by 3 and you get 8. What was my number?"
+  ]
+}
+
